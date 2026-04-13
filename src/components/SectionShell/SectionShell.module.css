@@ -1,0 +1,47 @@
+.section {
+  position: relative;
+  margin: 0 auto;
+  width: min(1080px, 92vw);
+  padding: 2.8rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--color-border-strong);
+  background: var(--glass-bg);
+  box-shadow: var(--shadow-glass);
+  backdrop-filter: blur(12px);
+}
+
+.section__header {
+  margin-bottom: 1.8rem;
+}
+
+.section__eyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--color-accent-red);
+  text-transform: uppercase;
+}
+
+.section__title {
+  margin: 0.4rem 0 0.6rem;
+  font-size: clamp(1.6rem, 2.3vw, 2.2rem);
+  font-family: var(--font-sans);
+  color: var(--color-text-strong);
+}
+
+.section__subtitle {
+  margin: 0;
+  color: var(--color-text-soft);
+  font-size: 1rem;
+}
+
+.section__body {
+  display: grid;
+  gap: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 1.4rem;
+  }
+}

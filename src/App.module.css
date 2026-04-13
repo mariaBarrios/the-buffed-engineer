@@ -1,0 +1,10 @@
+.app {
+  min-height: 100vh;
+  background: var(--color-bg-deep);
+}
+
+.app__content {
+  padding: 2.5rem 0 4rem;
+  display: grid;
+  gap: 1.4rem;
+}

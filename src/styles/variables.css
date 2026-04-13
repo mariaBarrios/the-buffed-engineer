@@ -1,0 +1,21 @@
+:root {
+  --color-bg-deep: #0a0a0a;
+  --color-bg-elevated: #111313;
+  --color-text-strong: #f5fff8;
+  --color-text-soft: #c7d8cc;
+  --color-text-dim: #8ca095;
+  --color-accent-green: #00ff41;
+  --color-accent-red: #ff4b2b;
+  --color-border-soft: rgb(255 255 255 / 14%);
+  --color-border-strong: rgb(0 255 65 / 36%);
+
+  --glass-bg: linear-gradient(145deg, rgb(255 255 255 / 8%), rgb(255 255 255 / 2%));
+  --shadow-glass:
+    0 14px 36px rgb(0 0 0 / 46%),
+    0 0 0 1px rgb(255 255 255 / 4%) inset;
+
+  --duration-fast: 220ms;
+
+  --font-sans: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}

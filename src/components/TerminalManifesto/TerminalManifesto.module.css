@@ -1,0 +1,73 @@
+.terminal {
+  border-radius: 0.9rem;
+  overflow: hidden;
+  border: 1px solid rgb(0 255 65 / 38%);
+  box-shadow: inset 0 0 0 1px rgb(0 255 65 / 8%), 0 0 20px rgb(0 255 65 / 16%);
+}
+
+.terminal__header {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgb(0 0 0 / 85%);
+  border-bottom: 1px solid rgb(0 255 65 / 25%);
+  padding: 0.68rem 0.9rem;
+}
+
+.terminal__dot {
+  width: 0.52rem;
+  height: 0.52rem;
+  border-radius: 50%;
+  background: var(--color-accent-red);
+}
+
+.terminal__dot:nth-child(2) {
+  background: #ffd75e;
+}
+
+.terminal__dot:nth-child(3) {
+  background: var(--color-accent-green);
+}
+
+.terminal__path {
+  margin: 0 0 0 0.55rem;
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+  font-family: var(--font-mono);
+}
+
+.terminal__body {
+  background: rgb(2 9 6 / 96%);
+  padding: 1rem;
+}
+
+.terminal__prompt {
+  margin: 0;
+  color: var(--color-text-soft);
+  font-family: var(--font-mono);
+  font-size: 0.87rem;
+}
+
+.terminal__prompt--accent {
+  color: var(--color-accent-green);
+}
+
+.terminal__output {
+  margin: 0.75rem 0 0;
+  white-space: pre-wrap;
+  color: #caffdb;
+  min-height: 9rem;
+  font-family: var(--font-mono);
+  line-height: 1.58;
+}
+
+.terminal__cursor {
+  margin-left: 0.2rem;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

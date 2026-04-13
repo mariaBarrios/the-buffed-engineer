@@ -1,0 +1,67 @@
+.duel {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.duel__panel {
+  border-radius: 1rem;
+  border: 1px solid var(--color-border-soft);
+  background: rgb(5 8 9 / 75%);
+  padding: 1rem;
+  transition: border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+.duel__panel--ai {
+  border-color: rgb(255 75 43 / 44%);
+}
+
+.duel__panel--ai:hover {
+  box-shadow: 0 0 16px rgb(255 75 43 / 24%);
+}
+
+.duel__panel--architect {
+  border-color: rgb(0 255 65 / 40%);
+}
+
+.duel__panel--architect:hover {
+  box-shadow: 0 0 16px rgb(0 255 65 / 26%);
+}
+
+.duel__header {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.duel__header h3 {
+  margin: 0;
+  font-size: 0.96rem;
+  color: var(--color-text-strong);
+}
+
+.duel__header p {
+  margin: 0.2rem 0 0;
+  font-size: 0.72rem;
+  color: var(--color-text-dim);
+}
+
+.duel__code {
+  margin: 0;
+  max-height: 420px;
+  overflow: auto;
+  padding: 0.9rem;
+  border-radius: 0.7rem;
+  background: rgb(2 4 5 / 92%);
+  color: #d7fff0;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 900px) {
+  .duel {
+    grid-template-columns: 1fr;
+  }
+}
