@@ -409,6 +409,49 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
           },
         ],
       },
+      finalSlide: {
+        title: 'La IA acelera, la arquitectura sostiene',
+        subtitle: 'De “funciona hoy” a “evoluciona mañana”',
+        before: {
+          title: 'Antes',
+          bullets: [
+            'Contenido acoplado al código (InMemory enorme).',
+            'Composición de dependencias dentro de la UI.',
+            'Bundle inicial pesado.',
+          ],
+        },
+        decisions: {
+          title: 'Decisiones',
+          bullets: [
+            'Composición hexagonal en bootstrap (main).',
+            'Capa de view-models para desacoplar dominio y presentación.',
+            'Backlog técnico explícito: code splitting + contenido externo.',
+          ],
+        },
+        result: {
+          title: 'Resultado',
+          bullets: [
+            'Más mantenibilidad y testabilidad.',
+            'Capacidad de cambiar infraestructura sin romper el núcleo.',
+            'Narrativa técnica clara para equipo y producto.',
+          ],
+        },
+        closingQuote: 'La IA escribe más rápido. Tu criterio decide si eso escala.',
+        references: [
+          {
+            label: 'Issue #1 — Fase 2: Optimizar bundle con code splitting',
+            url: 'https://github.com/mariaBarrios/the-buffed-architect/issues/1',
+          },
+          {
+            label: 'Issue #2 — Fase 2: Extraer TalkContent fuera del repositorio in-memory',
+            url: 'https://github.com/mariaBarrios/the-buffed-architect/issues/2',
+          },
+          {
+            label: 'Issue #3 — Fase 2: Roadmap técnico para la charla',
+            url: 'https://github.com/mariaBarrios/the-buffed-architect/issues/3',
+          },
+        ],
+      },
     };
   }
 }

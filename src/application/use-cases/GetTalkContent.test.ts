@@ -61,6 +61,15 @@ const contentFixture: TalkContent = {
     subtitle: 'fundamentals subtitle',
     entries: [],
   },
+  finalSlide: {
+    title: 'Final',
+    subtitle: 'final subtitle',
+    before: { title: 'Before', bullets: [] },
+    decisions: { title: 'Decisions', bullets: [] },
+    result: { title: 'Result', bullets: [] },
+    closingQuote: 'Quote',
+    references: [],
+  },
 };
 
 class StubTalkContentRepository implements TalkContentRepository {

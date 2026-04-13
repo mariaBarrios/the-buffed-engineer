@@ -51,4 +51,5 @@ export const mapTalkContentToViewModel = (content: TalkContent): TalkContentView
       id: toId(entry.title),
     })),
   },
+  finalSlide: content.finalSlide,
 });

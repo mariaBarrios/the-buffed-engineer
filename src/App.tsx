@@ -10,6 +10,7 @@ import { AIRails } from './components/AIRails/AIRails';
 import { AIEngineeringFundamentals } from './components/AIEngineeringFundamentals/AIEngineeringFundamentals';
 import { XpTimeline } from './components/XpTimeline/XpTimeline';
 import { TerminalManifesto } from './components/TerminalManifesto/TerminalManifesto';
+import { FinalKnowledgePill } from './components/FinalKnowledgePill/FinalKnowledgePill';
 import type { TalkContentViewModel } from './presentation/view-models/TalkContentViewModel';
 import styles from './App.module.css';
 
@@ -37,6 +38,7 @@ export const App = ({ content }: AppProps) => (
         <AIRails content={content.aiRails} />
         <AIEngineeringFundamentals content={content.aiEngineeringFundamentals} />
         <TerminalManifesto manifesto={content.manifesto} active={true} />
+        <FinalKnowledgePill content={content.finalSlide} />
       </motion.main>
     </div>
   );

@@ -127,6 +127,26 @@ export interface ClientProjectsContent {
   clients: ClientProjectEntry[];
 }
 
+export interface FinalSlideBlock {
+  title: string;
+  bullets: string[];
+}
+
+export interface FinalSlideReference {
+  label: string;
+  url: string;
+}
+
+export interface FinalSlideContent {
+  title: string;
+  subtitle: string;
+  before: FinalSlideBlock;
+  decisions: FinalSlideBlock;
+  result: FinalSlideBlock;
+  closingQuote: string;
+  references: FinalSlideReference[];
+}
+
 export interface TalkContent {
   hero: HeroContent;
   introProfile: IntroProfileContent;
@@ -139,4 +159,5 @@ export interface TalkContent {
   dailyTasks: DailyTasksContent;
   aiRails: AIRailsContent;
   aiEngineeringFundamentals: AIEngineeringFundamentalsContent;
+  finalSlide: FinalSlideContent;
 }

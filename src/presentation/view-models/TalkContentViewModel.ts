@@ -129,6 +129,26 @@ export interface ClientProjectsViewModel {
   clients: ClientProjectEntryViewModel[];
 }
 
+export interface FinalSlideBlockViewModel {
+  title: string;
+  bullets: string[];
+}
+
+export interface FinalSlideReferenceViewModel {
+  label: string;
+  url: string;
+}
+
+export interface FinalSlideViewModel {
+  title: string;
+  subtitle: string;
+  before: FinalSlideBlockViewModel;
+  decisions: FinalSlideBlockViewModel;
+  result: FinalSlideBlockViewModel;
+  closingQuote: string;
+  references: FinalSlideReferenceViewModel[];
+}
+
 export interface TalkContentViewModel {
   hero: HeroViewModel;
   introProfile: IntroProfileViewModel;
@@ -141,4 +161,5 @@ export interface TalkContentViewModel {
   dailyTasks: DailyTasksViewModel;
   aiRails: AIRailsViewModel;
   aiEngineeringFundamentals: AIEngineeringFundamentalsViewModel;
+  finalSlide: FinalSlideViewModel;
 }
