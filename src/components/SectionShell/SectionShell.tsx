@@ -4,25 +4,43 @@ import styles from './SectionShell.module.css';
 
 interface SectionShellProps {
   id: string;
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
+  eyebrow?: string;
   children: ReactNode;
 }
 
-export const SectionShell = ({ id, title, subtitle, children }: SectionShellProps) => (
-  <motion.section
-    id={id}
-    className={styles.section}
-    initial={{ opacity: 0, y: 24 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.2 }}
-    transition={{ duration: 0.6, ease: 'easeOut' }}
-  >
-    <header className={styles.section__header}>
-      <p className={styles.section__eyebrow}>BUFFED ARCHITECT MODE</p>
-      <h2 className={styles.section__title}>{title}</h2>
-      <p className={styles.section__subtitle}>{subtitle}</p>
-    </header>
-    <div className={styles.section__body}>{children}</div>
-  </motion.section>
-);
+export const SectionShell = ({
+  id,
+  title = '',
+  subtitle = '',
+  eyebrow = 'BUFFED ARCHITECT MODE',
+  children,
+}: SectionShellProps) => {
+  const showHeader = title.trim().length > 0;
+  const showEyebrow = eyebrow.trim().length > 0;
+
+  return (
+    <motion.section
+      id={id}
+      className={styles.section}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
+      {showHeader ? (
+        <header className={styles.section__header}>
+          {showEyebrow ? (
+            <p className={styles.section__eyebrow}>{eyebrow}</p>
+          ) : null}
+          <h2 className={styles.section__title}>{title}</h2>
+          {subtitle.trim() ? (
+            <p className={styles.section__subtitle}>{subtitle}</p>
+          ) : null}
+        </header>
+      ) : null}
+      <div className={styles.section__body}>{children}</div>
+    </motion.section>
+  );
+};

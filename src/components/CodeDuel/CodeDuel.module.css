@@ -1,10 +1,11 @@
 .duel {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
 }
 
 .duel__panel {
+  min-width: 0;
   border-radius: 1rem;
   border: 1px solid var(--color-border-soft);
   background: rgb(5 8 9 / 75%);
@@ -13,19 +14,19 @@
 }
 
 .duel__panel--ai {
-  border-color: rgb(255 75 43 / 44%);
+  border-color: rgb(236 72 153 / 44%);
 }
 
 .duel__panel--ai:hover {
-  box-shadow: 0 0 16px rgb(255 75 43 / 24%);
+  box-shadow: 0 0 16px rgb(236 72 153 / 24%);
 }
 
 .duel__panel--architect {
-  border-color: rgb(0 255 65 / 40%);
+  border-color: rgb(45 212 191 / 40%);
 }
 
 .duel__panel--architect:hover {
-  box-shadow: 0 0 16px rgb(0 255 65 / 26%);
+  box-shadow: 0 0 16px rgb(45 212 191 / 26%);
 }
 
 .duel__header {
@@ -35,33 +36,72 @@
   margin-bottom: 0.8rem;
 }
 
+.duel__header svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
 .duel__header h3 {
   margin: 0;
-  font-size: 0.96rem;
+  font-size: var(--text-base);
+  line-height: var(--leading-tight);
   color: var(--color-text-strong);
 }
 
 .duel__header p {
   margin: 0.2rem 0 0;
-  font-size: 0.72rem;
+  font-size: var(--text-meta);
   color: var(--color-text-dim);
 }
 
 .duel__code {
-  margin: 0;
-  max-height: 420px;
-  overflow: auto;
-  padding: 0.9rem;
-  border-radius: 0.7rem;
-  background: rgb(2 4 5 / 92%);
-  color: #d7fff0;
-  font-size: 0.8rem;
-  line-height: 1.55;
+  min-width: 0;
   font-family: var(--font-mono);
 }
 
-@media (max-width: 900px) {
-  .duel {
-    grid-template-columns: 1fr;
-  }
+.duel__code code {
+  font-family: var(--font-mono);
+}
+
+.duel__details {
+  min-width: 0;
+}
+
+.duel__summary {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.duel__summary svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.duel__summary::-webkit-details-marker {
+  display: none;
+}
+
+.duel__summary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(45 212 191 / 38%);
+  border-radius: 0.45rem;
+}
+
+.duel__summary h3 {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: var(--leading-tight);
+  color: var(--color-text-strong);
+}
+
+.duel__summary p {
+  margin: 0.2rem 0 0;
+  font-size: var(--text-meta);
+  color: var(--color-text-dim);
 }

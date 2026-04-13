@@ -6,19 +6,19 @@
 
 .timeline__line {
   position: absolute;
-  left: 17px;
+  left: 21px;
   top: 0;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(var(--color-accent-green), rgb(0 255 65 / 12%));
+  background: linear-gradient(var(--color-accent-green), rgb(45 212 191 / 12%));
 }
 
 .timeline__item {
-  margin-left: 2rem;
+  margin-left: 2.4rem;
   border: 1px solid var(--color-border-soft);
   border-radius: 0.9rem;
   padding: 0.95rem 1rem;
-  background: rgb(8 13 13 / 76%);
+  background: rgb(8 13 16 / 76%);
   position: relative;
   transition: border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
 }
@@ -26,41 +26,72 @@
 .timeline__item::before {
   content: '';
   position: absolute;
-  left: -1.52rem;
+  left: -1.88rem;
   top: 1.1rem;
-  width: 0.65rem;
-  height: 0.65rem;
+  width: 0.82rem;
+  height: 0.82rem;
   border-radius: 50%;
   background: var(--color-accent-green);
-  box-shadow: 0 0 10px rgb(0 255 65 / 70%);
+  box-shadow: 0 0 10px rgb(45 212 191 / 65%);
 }
 
 .timeline__item:hover {
-  border-color: rgb(0 255 65 / 52%);
-  box-shadow: 0 0 16px rgb(0 255 65 / 14%);
+  border-color: rgb(45 212 191 / 48%);
+  box-shadow: 0 0 16px rgb(45 212 191 / 12%);
+}
+
+.timeline__heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.timeline__content {
+  min-width: 0;
+}
+
+.timeline__iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-top: 0.1rem;
+  border: 1px solid rgb(45 212 191 / 35%);
+  border-radius: 0.55rem;
+  background: rgb(45 212 191 / 8%);
+}
+
+.timeline__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-accent-green);
 }
 
 .timeline__year {
   color: var(--color-accent-red);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--text-caption);
   letter-spacing: 0.1em;
 }
 
 .timeline__title {
-  margin: 0.28rem 0 0;
+  margin: 0.2rem 0 0;
   color: var(--color-text-strong);
-  font-size: 1.08rem;
+  font-size: var(--text-title-sm);
+  line-height: var(--leading-tight);
 }
 
 .timeline__stack {
   margin: 0.45rem 0 0;
   color: var(--color-accent-green);
   font-family: var(--font-mono);
-  font-size: 0.86rem;
+  font-size: var(--text-meta);
 }
 
 .timeline__insight {
   margin: 0.55rem 0 0;
   color: var(--color-text-soft);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
 }

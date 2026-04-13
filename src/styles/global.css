@@ -20,12 +20,13 @@ html {
 
 body {
   font-family: var(--font-sans);
+  font-size: var(--text-base);
   background: var(--color-bg-deep);
   color: var(--color-text-strong);
-  line-height: 1.5;
+  line-height: var(--leading-normal);
   background-image:
-    radial-gradient(circle at 18% 18%, rgb(0 255 65 / 8%), transparent 38%),
-    radial-gradient(circle at 90% 84%, rgb(255 75 43 / 7%), transparent 34%);
+    radial-gradient(circle at 18% 18%, rgb(45 212 191 / 9%), transparent 38%),
+    radial-gradient(circle at 90% 84%, rgb(236 72 153 / 8%), transparent 34%);
 }
 
 h1,

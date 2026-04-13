@@ -1,0 +1,11 @@
+Logos descargados desde Wikimedia Commons (https://commons.wikimedia.org) para uso en esta demo:
+
+- unicaja.svg — File:Unicaja logo.svg (dominio público por umbral de originalidad)
+- genially.png — File:Genially (2023) logotipo.png (PD-textlogo en Commons)
+- mcp.jpg — File:Logo MCP.jpg (CC0)
+- zara.svg — File:Zara Logo.svg (PD-textlogo)
+- el-corte-ingles.svg — File:Logo Corte Inglés.svg (PD-textlogo)
+- barcelo.svg — File:Grupo Barceló logo.svg (CC BY 3.0 — autor: Goldorak; GFDL/CC-BY según la ficha del archivo)
+- laboral-kutxa.jpg — File:Logo Laboral Kutxa.JPG (CC BY-SA 3.0 — ver ficha en Commons)
+
+Las marcas pueden estar protegidas como trademark; el uso aquí es informativo en un portfolio personal.

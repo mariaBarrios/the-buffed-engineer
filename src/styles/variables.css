@@ -1,13 +1,15 @@
 :root {
-  --color-bg-deep: #0a0a0a;
-  --color-bg-elevated: #111313;
-  --color-text-strong: #f5fff8;
-  --color-text-soft: #c7d8cc;
-  --color-text-dim: #8ca095;
-  --color-accent-green: #00ff41;
-  --color-accent-red: #ff4b2b;
+  --color-bg-deep: #080c0f;
+  --color-bg-elevated: #0f1418;
+  --color-text-strong: #f4fbfc;
+  --color-text-soft: #bfe8e4;
+  --color-text-dim: #6f9ea3;
+  --color-accent-turquoise: #2dd4bf;
+  --color-accent-pink: #ec4899;
+  --color-accent-green: var(--color-accent-turquoise);
+  --color-accent-red: var(--color-accent-pink);
   --color-border-soft: rgb(255 255 255 / 14%);
-  --color-border-strong: rgb(0 255 65 / 36%);
+  --color-border-strong: rgb(45 212 191 / 36%);
 
   --glass-bg: linear-gradient(145deg, rgb(255 255 255 / 8%), rgb(255 255 255 / 2%));
   --shadow-glass:
@@ -18,4 +20,18 @@
 
   --font-sans: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Vertical rhythm type scale (base: 20px = 1.25rem) */
+  --text-caption: 1rem;
+  --text-meta: 1.125rem;
+  --text-base: 1.25rem;
+  --text-lead: 1.5rem;
+  --text-title-sm: 1.875rem;
+  --text-title-md: 2.25rem;
+  --text-title-lg: 2.75rem;
+  --text-display: 3.25rem;
+
+  --leading-tight: 1.2;
+  --leading-normal: 1.45;
+  --leading-relaxed: 1.6;
 }

@@ -9,9 +9,11 @@ describe('GetTalkContent', () => {
     const result = useCase.execute();
 
     expect(result.hero.title).toBe('THE BUFFED ARCHITECT');
-    expect(result.codeDuel.aiSnippet.code).toContain('function UserDashboard');
+    expect(result.codeDuel.aiSnippet.code).toContain('Juan Pérez');
     expect(result.skillTree.pillars).toHaveLength(3);
     expect(result.timeline.entries).toHaveLength(4);
-    expect(result.manifesto.lines[0]).toContain('No delegues criterio');
+    expect(result.manifesto.lines[0]).toContain('IA para lo aburrido');
+    expect(result.aiEngineeringFundamentals.entries).toHaveLength(5);
+    expect(result.aiEngineeringFundamentals.entries[0].title).toBe('Arquitectura');
   });
 });

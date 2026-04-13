@@ -1,0 +1,124 @@
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.card {
+  border-radius: 1rem;
+  border: 1px solid var(--color-border-soft);
+  background: rgb(8 12 16 / 80%);
+  padding: 1.5rem;
+  transition: transform var(--duration-fast) ease, border-color var(--duration-fast) ease;
+}
+
+.card:hover {
+  border-color: rgb(236 72 153 / 50%);
+  transform: translateY(-4px);
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__details {
+  display: block;
+}
+
+.card__summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.card__summary::-webkit-details-marker {
+  display: none;
+}
+
+.card__chevron {
+  width: 24px;
+  height: 24px;
+  color: var(--color-text-soft);
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) ease;
+}
+
+.card__details[open] .card__chevron {
+  transform: rotate(180deg);
+}
+
+.card__content {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card__iconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(236 72 153 / 55%);
+  background: rgb(236 72 153 / 12%);
+  box-shadow: 0 0 16px rgb(236 72 153 / 18%);
+  flex-shrink: 0;
+}
+
+.card__icon {
+  width: 30px;
+  height: 30px;
+  color: var(--color-accent-pink);
+}
+
+.card__title {
+  margin: 0;
+  color: var(--color-text-strong);
+  font-size: var(--text-title-sm);
+  line-height: var(--leading-tight);
+}
+
+.card__description {
+  margin: 0;
+  color: var(--color-text-soft);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+.card__example {
+  background: rgb(255 255 255 / 5%);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: var(--text-base);
+  color: var(--color-text-soft);
+  border-left: 3px solid var(--color-accent-pink);
+}
+
+.card__example strong {
+  color: var(--color-accent-pink);
+}
+
+.card__solution {
+  background: rgb(45 212 191 / 6%);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: var(--text-base);
+  color: var(--color-text-soft);
+  border-left: 3px solid var(--color-accent-green);
+}
+
+.card__solution strong {
+  color: var(--color-accent-green);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -16,7 +16,7 @@
 
 .section__eyebrow {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: var(--text-caption);
   letter-spacing: 0.12em;
   color: var(--color-accent-red);
   text-transform: uppercase;
@@ -24,15 +24,17 @@
 
 .section__title {
   margin: 0.4rem 0 0.6rem;
-  font-size: clamp(1.6rem, 2.3vw, 2.2rem);
+  font-size: clamp(var(--text-title-sm), 2.8vw, var(--text-title-md));
   font-family: var(--font-sans);
+  line-height: var(--leading-tight);
   color: var(--color-text-strong);
 }
 
 .section__subtitle {
   margin: 0;
   color: var(--color-text-soft);
-  font-size: 1rem;
+  font-size: var(--text-lead);
+  line-height: var(--leading-normal);
 }
 
 .section__body {

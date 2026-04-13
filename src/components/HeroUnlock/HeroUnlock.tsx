@@ -1,22 +1,13 @@
 import { motion } from 'framer-motion';
+import { Bot, Sparkles } from 'lucide-react';
 import type { HeroContent } from '../../domain/entities/TalkContent';
 import styles from './HeroUnlock.module.css';
 
 interface HeroUnlockProps {
   hero: HeroContent;
-  isUnlocked: boolean;
-  isUnlocking: boolean;
-  unlockProgress: number;
-  onUnlock: () => void;
 }
 
-export const HeroUnlock = ({
-  hero,
-  isUnlocked,
-  isUnlocking,
-  unlockProgress,
-  onUnlock,
-}: HeroUnlockProps) => (
+export const HeroUnlock = ({ hero }: HeroUnlockProps) => (
   <section className={styles.hero}>
     <div className={styles.hero__overlay} />
     <motion.div
@@ -25,32 +16,18 @@ export const HeroUnlock = ({
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <p className={styles.hero__tag}>Loot Box Experience</p>
       <h1 className={styles.hero__title}>{hero.title}</h1>
       <p className={styles.hero__subtitle}>{hero.subtitle}</p>
-
-      <motion.button
-        type="button"
-        className={styles.hero__button}
-        whileHover={{ scale: 1.04 }}
-        whileTap={{ scale: 0.97 }}
-        disabled={isUnlocking || isUnlocked}
-        onClick={onUnlock}
-      >
-        {isUnlocked ? 'LEVEL UNLOCKED' : hero.callToAction}
-      </motion.button>
-
-      <div className={styles.hero__progressTrack} aria-hidden={!isUnlocking}>
-        <div className={styles.hero__progressFill} style={{ width: `${unlockProgress}%` }} />
+      <div className={styles.hero__visual} aria-hidden="true">
+        <span className={styles.hero__chip}>
+          <Sparkles className={styles.hero__chipIcon} />
+          AI POWERED
+        </span>
+        <span className={styles.hero__chip}>
+          <Bot className={styles.hero__chipIcon} />
+          HUMAN GUIDED
+        </span>
       </div>
-
-      <p className={styles.hero__status}>
-        {isUnlocked
-          ? hero.unlockedLabel
-          : isUnlocking
-            ? `Unlocking... ${unlockProgress}%`
-            : 'Press the button to reveal the full talk support web.'}
-      </p>
     </motion.div>
   </section>
 );
