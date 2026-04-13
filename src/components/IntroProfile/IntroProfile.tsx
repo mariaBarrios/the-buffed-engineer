@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import type { IntroProfileViewModel } from '../../presentation/view-models/TalkContentViewModel';
 import { SectionShell } from '../SectionShell/SectionShell';
+import { resolveAssetUrl } from '../../shared/resolveAssetUrl';
 import styles from './IntroProfile.module.css';
 
 interface IntroProfileProps {
@@ -20,7 +21,7 @@ export const IntroProfile = ({ content }: IntroProfileProps) => (
         <figure className={styles.profile__photoCard}>
           <img
             className={styles.profile__photo}
-            src={content.photoSrc}
+            src={resolveAssetUrl(content.photoSrc)}
             alt={content.photoAlt}
             loading="lazy"
           />
@@ -28,7 +29,7 @@ export const IntroProfile = ({ content }: IntroProfileProps) => (
         <div className={styles.profile__logoWrap}>
           <img
             className={styles.profile__logo}
-            src={content.companyLogoSrc}
+            src={resolveAssetUrl(content.companyLogoSrc)}
             alt={content.companyLogoAlt}
             loading="lazy"
           />

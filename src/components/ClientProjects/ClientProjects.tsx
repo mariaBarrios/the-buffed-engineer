@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import type { ClientProjectsViewModel } from '../../presentation/view-models/TalkContentViewModel';
 import { SectionShell } from '../SectionShell/SectionShell';
+import { resolveAssetUrl } from '../../shared/resolveAssetUrl';
 import styles from './ClientProjects.module.css';
 
 interface ClientProjectsProps {
@@ -29,7 +30,7 @@ export const ClientProjects = ({ content }: ClientProjectsProps) => (
           >
             <img
               className={styles.logo}
-              src={client.logoSrc}
+              src={resolveAssetUrl(client.logoSrc)}
               alt={client.logoAlt}
               loading="lazy"
               decoding="async"
