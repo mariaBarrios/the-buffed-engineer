@@ -8,13 +8,13 @@
   min-width: 0;
   border-radius: 1rem;
   border: 1px solid var(--color-border-soft);
-  background: rgb(5 8 9 / 75%);
+  background: var(--surface-card);
   padding: 1rem;
   transition: border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
 }
 
 .duel__panel--ai {
-  border-color: rgb(236 72 153 / 44%);
+  border-color: var(--color-accent-pink-muted);
 }
 
 .duel__panel--ai:hover {
@@ -22,7 +22,7 @@
 }
 
 .duel__panel--architect {
-  border-color: rgb(45 212 191 / 40%);
+  border-color: var(--color-accent-green-muted);
 }
 
 .duel__panel--architect:hover {
@@ -89,7 +89,7 @@
 
 .duel__summary:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgb(45 212 191 / 38%);
+  box-shadow: 0 0 0 3px var(--color-accent-green-border-soft);
   border-radius: 0.45rem;
 }
 

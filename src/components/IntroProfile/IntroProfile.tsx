@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import type { IntroProfileContent } from '../../domain/entities/TalkContent';
+import type { IntroProfileViewModel } from '../../presentation/view-models/TalkContentViewModel';
 import { SectionShell } from '../SectionShell/SectionShell';
 import styles from './IntroProfile.module.css';
 
 interface IntroProfileProps {
-  content: IntroProfileContent;
+  content: IntroProfileViewModel;
 }
 
 export const IntroProfile = ({ content }: IntroProfileProps) => (

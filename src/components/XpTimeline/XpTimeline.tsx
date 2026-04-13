@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
 import { Atom, Bot, BriefcaseBusiness, CircleDot, MonitorSmartphone } from 'lucide-react';
-import type { TimelineContent } from '../../domain/entities/TalkContent';
+import type { TimelineViewModel } from '../../presentation/view-models/TalkContentViewModel';
 import { SectionShell } from '../SectionShell/SectionShell';
 import styles from './XpTimeline.module.css';
 
 interface XpTimelineProps {
-  timeline: TimelineContent;
+  timeline: TimelineViewModel;
 }
 
 const STAGE_ICONS: LucideIcon[] = [BriefcaseBusiness, MonitorSmartphone, Atom, Bot];

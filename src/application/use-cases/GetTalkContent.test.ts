@@ -1,19 +1,80 @@
 import { describe, expect, it } from 'vitest';
 import { GetTalkContent } from './GetTalkContent';
-import { InMemoryTalkContentRepository } from '../../infrastructure/repositories/InMemoryTalkContentRepository';
+import type { TalkContent } from '../../domain/entities/TalkContent';
+import type { TalkContentRepository } from '../../domain/ports/TalkContentRepository';
+
+const contentFixture: TalkContent = {
+  hero: { title: 'The Buffed Architect', subtitle: 'subtitle' },
+  introProfile: {
+    nameLead: 'Soy ',
+    name: 'María',
+    intro: 'intro',
+    experience: 'experience',
+    companyLogoSrc: '/logo.png',
+    companyLogoAlt: 'Logo',
+    photoSrc: '/photo.png',
+    photoAlt: 'Photo',
+  },
+  clientProjects: {
+    title: 'clients',
+    subtitle: 'clients subtitle',
+    clients: [],
+  },
+  codeDuel: {
+    title: 'duel',
+    subtitle: 'duel subtitle',
+    aiSnippet: { label: 'ai', language: 'ts', code: 'console.log(1);' },
+    architectSnippet: { label: 'architect', language: 'ts', code: 'console.log(2);' },
+  },
+  skillTree: {
+    title: 'skills',
+    subtitle: 'skills subtitle',
+    pillars: [],
+  },
+  timeline: {
+    title: 'timeline',
+    subtitle: 'timeline subtitle',
+    entries: [],
+  },
+  manifesto: {
+    title: 'manifesto',
+    prompt: 'cat file',
+    lines: ['line 1'],
+  },
+  aiFails: {
+    title: 'fails',
+    subtitle: 'fails subtitle',
+    entries: [],
+  },
+  dailyTasks: {
+    title: 'tasks',
+    subtitle: 'tasks subtitle',
+    tasks: [],
+  },
+  aiRails: {
+    title: 'rails',
+    subtitle: 'rails subtitle',
+    entries: [],
+  },
+  aiEngineeringFundamentals: {
+    title: 'fundamentals',
+    subtitle: 'fundamentals subtitle',
+    entries: [],
+  },
+};
+
+class StubTalkContentRepository implements TalkContentRepository {
+  getContent(): TalkContent {
+    return contentFixture;
+  }
+}
 
 describe('GetTalkContent', () => {
-  it('returns complete talk structure for all sections', () => {
-    const useCase = new GetTalkContent(new InMemoryTalkContentRepository());
+  it('returns the same content provided by the repository port', () => {
+    const useCase = new GetTalkContent(new StubTalkContentRepository());
 
     const result = useCase.execute();
 
-    expect(result.hero.title).toBe('THE BUFFED ARCHITECT');
-    expect(result.codeDuel.aiSnippet.code).toContain('Juan Pérez');
-    expect(result.skillTree.pillars).toHaveLength(3);
-    expect(result.timeline.entries).toHaveLength(4);
-    expect(result.manifesto.lines[0]).toContain('IA para lo aburrido');
-    expect(result.aiEngineeringFundamentals.entries).toHaveLength(5);
-    expect(result.aiEngineeringFundamentals.entries[0].title).toBe('Arquitectura');
+    expect(result).toEqual(contentFixture);
   });
 });

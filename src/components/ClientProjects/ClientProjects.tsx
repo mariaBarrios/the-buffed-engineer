@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import type { ClientProjectsContent } from '../../domain/entities/TalkContent';
+import type { ClientProjectsViewModel } from '../../presentation/view-models/TalkContentViewModel';
 import { SectionShell } from '../SectionShell/SectionShell';
 import styles from './ClientProjects.module.css';
 
 interface ClientProjectsProps {
-  content: ClientProjectsContent;
+  content: ClientProjectsViewModel;
 }
 
 export const ClientProjects = ({ content }: ClientProjectsProps) => (
@@ -30,7 +30,7 @@ export const ClientProjects = ({ content }: ClientProjectsProps) => (
             <img
               className={styles.logo}
               src={client.logoSrc}
-              alt=""
+              alt={client.logoAlt}
               loading="lazy"
               decoding="async"
             />

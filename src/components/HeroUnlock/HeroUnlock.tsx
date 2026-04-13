@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { Bot, Sparkles } from 'lucide-react';
-import type { HeroContent } from '../../domain/entities/TalkContent';
+import type { HeroViewModel } from '../../presentation/view-models/TalkContentViewModel';
 import styles from './HeroUnlock.module.css';
 
 interface HeroUnlockProps {
-  hero: HeroContent;
+  hero: HeroViewModel;
 }
 
 export const HeroUnlock = ({ hero }: HeroUnlockProps) => (

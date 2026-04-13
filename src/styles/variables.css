@@ -10,8 +10,17 @@
   --color-accent-red: var(--color-accent-pink);
   --color-border-soft: rgb(255 255 255 / 14%);
   --color-border-strong: rgb(45 212 191 / 36%);
+  --color-accent-green-muted: rgb(45 212 191 / 45%);
+  --color-accent-pink-muted: rgb(236 72 153 / 45%);
+  --color-accent-green-border-soft: rgb(45 212 191 / 30%);
 
   --glass-bg: linear-gradient(145deg, rgb(255 255 255 / 8%), rgb(255 255 255 / 2%));
+  --surface-card: rgb(8 12 16 / 80%);
+  --surface-card-alt: rgb(6 18 22 / 78%);
+  --surface-card-soft: rgb(255 255 255 / 5%);
+  --surface-accent-green-soft: rgb(45 212 191 / 6%);
+  --surface-accent-pink-soft: rgb(236 72 153 / 10%);
+  --surface-contrast: #ffffff;
   --shadow-glass:
     0 14px 36px rgb(0 0 0 / 46%),
     0 0 0 1px rgb(255 255 255 / 4%) inset;

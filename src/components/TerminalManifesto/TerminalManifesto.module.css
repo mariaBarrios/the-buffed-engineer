@@ -13,7 +13,7 @@
 }
 
 .card:hover {
-  border-color: rgb(45 212 191 / 45%);
+  border-color: var(--color-accent-green-muted);
   transform: translateY(-2px);
 }
 

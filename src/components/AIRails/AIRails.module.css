@@ -5,72 +5,9 @@
   align-items: start;
 }
 
-.card {
-  padding: 1.3rem;
-  border-radius: 1rem;
-  border: 1px solid var(--color-border-soft);
-  background: rgb(6 18 22 / 78%);
-  transition: border-color var(--duration-fast) ease, transform var(--duration-fast) ease;
-}
-
-.card:hover {
-  border-color: rgb(45 212 191 / 45%);
-  transform: translateY(-3px);
-}
-
-.card__header {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-}
-
-.card__details {
-  display: block;
-}
-
-.card__summary {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.75rem;
-  cursor: pointer;
-}
-
-.card__summary::-webkit-details-marker {
-  display: none;
-}
-
-.card__chevron {
-  width: 24px;
-  height: 24px;
-  color: var(--color-text-soft);
-  flex-shrink: 0;
-  transition: transform var(--duration-fast) ease;
-}
-
-.card__details[open] .card__chevron {
-  transform: rotate(180deg);
-}
-
-.card__content {
-  margin-top: 0.9rem;
-  display: grid;
-  gap: 0.9rem;
-}
-
 .card__icon {
   width: 28px;
   height: 28px;
-  color: var(--color-accent-green);
-  flex-shrink: 0;
-}
-
-.card__title {
-  margin: 0;
-  font-size: var(--text-lead);
-  line-height: var(--leading-tight);
-  color: var(--color-text-strong);
 }
 
 .card__description {
@@ -92,9 +29,9 @@
 .card__example {
   margin: 0.2rem 0;
   padding: 0.75rem;
-  background: rgba(45, 212, 191, 0.05);
+  background: var(--surface-accent-green-soft);
   border-radius: 0.5rem;
-  border: 1px dashed rgba(45, 212, 191, 0.3);
+  border: 1px dashed var(--color-accent-green-border-soft);
   color: var(--color-text-soft);
   font-size: var(--text-meta);
   line-height: var(--leading-normal);

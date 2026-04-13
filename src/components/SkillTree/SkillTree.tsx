@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { Gauge, Network, ShieldCheck } from 'lucide-react';
-import type { SkillPillar } from '../../domain/entities/TalkContent';
+import type { SkillPillarViewModel } from '../../presentation/view-models/TalkContentViewModel';
 import { SectionShell } from '../SectionShell/SectionShell';
 import styles from './SkillTree.module.css';
 
 interface SkillTreeProps {
-  pillars: SkillPillar[];
+  pillars: SkillPillarViewModel[];
 }
 
 const PILLAR_ICON = {

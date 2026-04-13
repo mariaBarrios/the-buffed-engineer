@@ -1,0 +1,144 @@
+export interface HeroViewModel {
+  title: string;
+  subtitle: string;
+}
+
+export interface CodeSnippetViewModel {
+  label: string;
+  language: string;
+  code: string;
+}
+
+export interface CodeDuelViewModel {
+  title: string;
+  subtitle: string;
+  aiSnippet: CodeSnippetViewModel;
+  architectSnippet: CodeSnippetViewModel;
+}
+
+export interface SkillPillarViewModel {
+  id: 'stability' | 'scalability' | 'performance';
+  title: string;
+  description: string;
+}
+
+export interface SkillTreeViewModel {
+  title: string;
+  subtitle: string;
+  pillars: SkillPillarViewModel[];
+}
+
+export interface TimelineEntryViewModel {
+  year: string;
+  title: string;
+  stack: string;
+  insight: string;
+}
+
+export interface TimelineViewModel {
+  title: string;
+  subtitle: string;
+  entries: TimelineEntryViewModel[];
+}
+
+export interface ManifestoViewModel {
+  title: string;
+  prompt: string;
+  lines: string[];
+}
+
+export interface AIFailEntryViewModel {
+  id: string;
+  title: string;
+  description: string;
+  example: string;
+  solution: string;
+}
+
+export interface AIFailsViewModel {
+  title: string;
+  subtitle: string;
+  entries: AIFailEntryViewModel[];
+}
+
+export interface DailyTaskEntryViewModel {
+  id: string;
+  title: string;
+  description: string;
+  example: string;
+  impact: string;
+}
+
+export interface DailyTasksViewModel {
+  title: string;
+  subtitle: string;
+  tasks: DailyTaskEntryViewModel[];
+}
+
+export interface AIRailsEntryViewModel {
+  id: string;
+  title: string;
+  description: string;
+  checklist: string[];
+  example?: string;
+  outcome: string;
+}
+
+export interface AIRailsViewModel {
+  title: string;
+  subtitle: string;
+  entries: AIRailsEntryViewModel[];
+}
+
+export interface AIEngineeringFundamentalsEntryViewModel {
+  id: string;
+  title: string;
+  description: string;
+  checklist: string[];
+  outcome: string;
+}
+
+export interface AIEngineeringFundamentalsViewModel {
+  title: string;
+  subtitle: string;
+  entries: AIEngineeringFundamentalsEntryViewModel[];
+}
+
+export interface IntroProfileViewModel {
+  nameLead?: string;
+  name: string;
+  intro: string;
+  experience: string;
+  companyLogoSrc: string;
+  companyLogoAlt: string;
+  photoSrc: string;
+  photoAlt: string;
+}
+
+export interface ClientProjectEntryViewModel {
+  id: string;
+  name: string;
+  logoSrc: string;
+  logoAlt: string;
+  isCurrent?: boolean;
+}
+
+export interface ClientProjectsViewModel {
+  title: string;
+  subtitle: string;
+  clients: ClientProjectEntryViewModel[];
+}
+
+export interface TalkContentViewModel {
+  hero: HeroViewModel;
+  introProfile: IntroProfileViewModel;
+  clientProjects: ClientProjectsViewModel;
+  codeDuel: CodeDuelViewModel;
+  skillTree: SkillTreeViewModel;
+  timeline: TimelineViewModel;
+  manifesto: ManifestoViewModel;
+  aiFails: AIFailsViewModel;
+  dailyTasks: DailyTasksViewModel;
+  aiRails: AIRailsViewModel;
+  aiEngineeringFundamentals: AIEngineeringFundamentalsViewModel;
+}

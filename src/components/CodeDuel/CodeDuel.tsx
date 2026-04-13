@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { Bot, Sword } from 'lucide-react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import type { CodeDuelContent } from '../../domain/entities/TalkContent';
+import type { CodeDuelViewModel } from '../../presentation/view-models/TalkContentViewModel';
 import { SectionShell } from '../SectionShell/SectionShell';
 import styles from './CodeDuel.module.css';
 
 interface CodeDuelProps {
-  duel: CodeDuelContent;
+  duel: CodeDuelViewModel;
 }
 
 const syntaxContainerStyle: CSSProperties = {

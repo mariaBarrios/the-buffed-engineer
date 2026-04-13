@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
 import { Bot, BrainCircuit, Gauge, GitBranch, TestTube2 } from 'lucide-react';
-import type { ManifestoContent } from '../../domain/entities/TalkContent';
+import type { ManifestoViewModel } from '../../presentation/view-models/TalkContentViewModel';
 import { SectionShell } from '../SectionShell/SectionShell';
 import styles from './TerminalManifesto.module.css';
 
 interface TerminalManifestoProps {
-  manifesto: ManifestoContent;
+  manifesto: ManifestoViewModel;
   active: boolean;
 }
 
