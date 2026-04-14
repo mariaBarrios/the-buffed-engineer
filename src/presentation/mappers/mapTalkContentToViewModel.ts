@@ -43,6 +43,13 @@ export const mapTalkContentToViewModel = (content: TalkContent): TalkContentView
       id: toId(entry.title),
     })),
   },
+  contextStrategy: {
+    ...content.contextStrategy,
+    layers: content.contextStrategy.layers.map((layer) => ({
+      ...layer,
+      id: toId(layer.title),
+    })),
+  },
   aiEngineeringFundamentals: {
     ...content.aiEngineeringFundamentals,
     entries: content.aiEngineeringFundamentals.entries.map((entry) => ({

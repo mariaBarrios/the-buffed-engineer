@@ -51,6 +51,11 @@ const contentFixture: TalkContent = {
     subtitle: 'rails subtitle',
     entries: [],
   },
+  contextStrategy: {
+    title: 'strategy',
+    subtitle: 'strategy subtitle',
+    layers: [],
+  },
   aiEngineeringFundamentals: {
     title: 'fundamentals',
     subtitle: 'fundamentals subtitle',

@@ -6,6 +6,7 @@ import { CodeDuel } from './components/CodeDuel/CodeDuel';
 import { AIFails } from './components/AIFails/AIFails';
 import { DailyTasks } from './components/DailyTasks/DailyTasks';
 import { AIRails } from './components/AIRails/AIRails';
+import { ContextStrategy } from './components/ContextStrategy/ContextStrategy';
 import { AIEngineeringFundamentals } from './components/AIEngineeringFundamentals/AIEngineeringFundamentals';
 import { XpTimeline } from './components/XpTimeline/XpTimeline';
 import { TerminalManifesto } from './components/TerminalManifesto/TerminalManifesto';
@@ -35,6 +36,7 @@ export const App = ({ content }: AppProps) => (
         <AIFails content={content.aiFails} />
         <DailyTasks content={content.dailyTasks} />
         <AIRails content={content.aiRails} />
+        <ContextStrategy content={content.contextStrategy} />
         <AIEngineeringFundamentals content={content.aiEngineeringFundamentals} />
         <TerminalManifesto manifesto={content.manifesto} active={true} />
         <FinalKnowledgePill content={content.finalSlide} />

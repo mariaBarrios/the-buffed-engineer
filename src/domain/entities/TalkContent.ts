@@ -75,6 +75,20 @@ export interface AIRailsContent {
   entries: AIRailsEntry[];
 }
 
+export interface ContextStrategyLayer {
+  title: string;
+  objective: string;
+  useWhen: string;
+  artifact: string;
+  example: string;
+}
+
+export interface ContextStrategyContent {
+  title: string;
+  subtitle: string;
+  layers: ContextStrategyLayer[];
+}
+
 export interface AIEngineeringFundamentalsEntry {
   title: string;
   description: string;
@@ -158,6 +172,7 @@ export interface TalkContent {
   aiFails: AIFailsContent;
   dailyTasks: DailyTasksContent;
   aiRails: AIRailsContent;
+  contextStrategy: ContextStrategyContent;
   aiEngineeringFundamentals: AIEngineeringFundamentalsContent;
   finalSlide: FinalSlideContent;
   finalContact: FinalContactContent;

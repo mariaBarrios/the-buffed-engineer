@@ -1,0 +1,13 @@
+---
+description: TypeScript safety conventions for generated and edited code
+globs: **/*.{ts,tsx}
+alwaysApply: false
+---
+
+# TypeScript Safety Standards
+
+- Never introduce `any`; prefer `unknown` + narrowing when needed.
+- Keep strict typing at module boundaries (props, function params, return types).
+- Avoid implicit behavior; model domain concepts with explicit types.
+- If type information is missing, ask for clarification before inventing types.
+- Preserve existing architecture and naming unless a change is explicitly requested.

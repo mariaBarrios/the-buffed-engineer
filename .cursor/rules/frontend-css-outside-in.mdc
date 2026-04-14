@@ -1,0 +1,29 @@
+---
+description: CSS property ordering using outside-in convention
+globs: src/**/*.module.css
+alwaysApply: false
+---
+
+# CSS Order: Outside-In
+
+Order CSS declarations from outside to inside for predictable, reviewable styles:
+
+1. **Layout / Positioning**
+   - `position`, `inset` (`top/right/bottom/left`), `z-index`
+   - `display`, `grid-*`, `flex-*`, `order`, `place-*`
+2. **Box Model**
+   - `width`, `height`, `min/max-*`
+   - `margin`, `padding`, `border`, `border-radius`, `box-sizing`
+3. **Visual**
+   - `background*`, `color`, `box-shadow`, `opacity`
+4. **Typography**
+   - `font*`, `line-height`, `letter-spacing`, `text-*`, `white-space`
+5. **Interaction / Motion**
+   - `cursor`, `pointer-events`, `user-select`
+   - `transition`, `transform`, `animation`
+
+Additional rules:
+
+- Keep related properties grouped and avoid mixed ordering.
+- Keep pseudo-classes (`:hover`, `:focus`) and media queries in the same outside-in spirit.
+- Prefer one declaration style per file and avoid ad-hoc ordering.

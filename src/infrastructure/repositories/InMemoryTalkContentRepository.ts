@@ -316,8 +316,40 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
               'Quita instrucciones vagas y añade casos borde con ejemplos.',
               'Revisa semanalmente qué Skills/agentes aportan valor real.',
             ],
-            example: 'Si el agente suele inventarse clases de Tailwind que no existen, crea una regla en `.cursor/rules/frontend-tailwind.mdc` que exija revisar `tailwind.config.js` y documenta el checklist de validación en `AGENTS.md`.',
+            example: 'Si el CSS se vuelve inconsistente entre componentes, crea una regla en `.cursor/rules/frontend-css-outside-in.mdc` para fijar orden outside-in y documenta el checklist de revisión en `AGENTS.md`.',
             outcome: 'Una IA más fiable, predecible y útil conforme avanza el proyecto.',
+          },
+        ],
+      },
+      contextStrategy: {
+        title: 'La estrategia que sí escala',
+        subtitle:
+          'Tres capas combinadas para que el agente recuerde contexto, siga proceso y ejecute cada tarea con foco.',
+        layers: [
+          {
+            title: 'Capa 1: Convenciones persistentes',
+            objective: 'Fija normas técnicas estables para que el agente no improvise en cada sesión.',
+            useWhen: 'Reglas que deben aplicarse siempre o por tipo de archivo.',
+            artifact: '.cursor/rules/*.mdc',
+            example:
+              'Crear `typescript-standards.mdc` para prohibir `any` y exigir tipos explícitos en fronteras de módulo.',
+          },
+          {
+            title: 'Capa 2: Flujo operativo del equipo',
+            objective:
+              'Define cómo trabajar: validaciones mínimas, comunicación de riesgos y cuándo detenerse para pedir contexto.',
+            useWhen: 'Comportamientos de ejecución que quieres repetir en todas las tareas.',
+            artifact: 'AGENTS.md',
+            example:
+              'Documentar checklist obligatorio (`lint`, tests y revisión del diff) más reglas de stop-and-ask.',
+          },
+          {
+            title: 'Capa 3: Instrucción táctica por tarea',
+            objective: 'Acota el alcance del trabajo para evitar refactors innecesarios o cambios laterales.',
+            useWhen: 'Cada petición concreta con restricciones de alcance y criterios de éxito.',
+            artifact: 'Prompt de la tarea',
+            example:
+              'Pedir: "Corrige solo este bug de validación en `CheckoutForm`, sin cambiar arquitectura ni estilos".',
           },
         ],
       },

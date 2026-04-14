@@ -78,6 +78,21 @@ export interface AIRailsViewModel {
   entries: AIRailsEntryViewModel[];
 }
 
+export interface ContextStrategyLayerViewModel {
+  id: string;
+  title: string;
+  objective: string;
+  useWhen: string;
+  artifact: string;
+  example: string;
+}
+
+export interface ContextStrategyViewModel {
+  title: string;
+  subtitle: string;
+  layers: ContextStrategyLayerViewModel[];
+}
+
 export interface AIEngineeringFundamentalsEntryViewModel {
   id: string;
   title: string;
@@ -160,6 +175,7 @@ export interface TalkContentViewModel {
   aiFails: AIFailsViewModel;
   dailyTasks: DailyTasksViewModel;
   aiRails: AIRailsViewModel;
+  contextStrategy: ContextStrategyViewModel;
   aiEngineeringFundamentals: AIEngineeringFundamentalsViewModel;
   finalSlide: FinalSlideViewModel;
   finalContact: FinalContactViewModel;
