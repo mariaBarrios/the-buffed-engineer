@@ -16,18 +16,6 @@ export interface CodeDuelViewModel {
   architectSnippet: CodeSnippetViewModel;
 }
 
-export interface SkillPillarViewModel {
-  id: 'stability' | 'scalability' | 'performance';
-  title: string;
-  description: string;
-}
-
-export interface SkillTreeViewModel {
-  title: string;
-  subtitle: string;
-  pillars: SkillPillarViewModel[];
-}
-
 export interface TimelineEntryViewModel {
   year: string;
   title: string;
@@ -167,7 +155,6 @@ export interface TalkContentViewModel {
   introProfile: IntroProfileViewModel;
   clientProjects: ClientProjectsViewModel;
   codeDuel: CodeDuelViewModel;
-  skillTree: SkillTreeViewModel;
   timeline: TimelineViewModel;
   manifesto: ManifestoViewModel;
   aiFails: AIFailsViewModel;

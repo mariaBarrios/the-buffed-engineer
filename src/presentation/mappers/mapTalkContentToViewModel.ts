@@ -20,7 +20,6 @@ export const mapTalkContentToViewModel = (content: TalkContent): TalkContentView
     })),
   },
   codeDuel: content.codeDuel,
-  skillTree: content.skillTree,
   timeline: content.timeline,
   manifesto: content.manifesto,
   aiFails: {

@@ -26,11 +26,6 @@ const contentFixture: TalkContent = {
     aiSnippet: { label: 'ai', language: 'ts', code: 'console.log(1);' },
     architectSnippet: { label: 'architect', language: 'ts', code: 'console.log(2);' },
   },
-  skillTree: {
-    title: 'skills',
-    subtitle: 'skills subtitle',
-    pillars: [],
-  },
   timeline: {
     title: 'timeline',
     subtitle: 'timeline subtitle',

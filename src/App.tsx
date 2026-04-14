@@ -3,7 +3,6 @@ import { HeroUnlock } from './components/HeroUnlock/HeroUnlock';
 import { IntroProfile } from './components/IntroProfile/IntroProfile';
 import { ClientProjects } from './components/ClientProjects/ClientProjects';
 import { CodeDuel } from './components/CodeDuel/CodeDuel';
-import { SkillTree } from './components/SkillTree/SkillTree';
 import { AIFails } from './components/AIFails/AIFails';
 import { DailyTasks } from './components/DailyTasks/DailyTasks';
 import { AIRails } from './components/AIRails/AIRails';
@@ -33,7 +32,6 @@ export const App = ({ content }: AppProps) => (
         <XpTimeline timeline={content.timeline} />
         <ClientProjects content={content.clientProjects} />
         <CodeDuel duel={content.codeDuel} />
-        <SkillTree pillars={content.skillTree.pillars} />
         <AIFails content={content.aiFails} />
         <DailyTasks content={content.dailyTasks} />
         <AIRails content={content.aiRails} />

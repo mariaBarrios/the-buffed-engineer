@@ -16,18 +16,6 @@ export interface CodeDuelContent {
   architectSnippet: CodeSnippet;
 }
 
-export interface SkillPillar {
-  id: 'stability' | 'scalability' | 'performance';
-  title: string;
-  description: string;
-}
-
-export interface SkillTreeContent {
-  title: string;
-  subtitle: string;
-  pillars: SkillPillar[];
-}
-
 export interface TimelineEntry {
   year: string;
   title: string;
@@ -165,7 +153,6 @@ export interface TalkContent {
   introProfile: IntroProfileContent;
   clientProjects: ClientProjectsContent;
   codeDuel: CodeDuelContent;
-  skillTree: SkillTreeContent;
   timeline: TimelineContent;
   manifesto: ManifestoContent;
   aiFails: AIFailsContent;

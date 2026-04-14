@@ -159,27 +159,6 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
           code: architectSnippetCode,
         },
       },
-      skillTree: {
-        title: 'Tus Skills (Árbol de Habilidades)',
-        subtitle: 'Lo que te diferencia de alguien que solo aporrea el teclado.',
-        pillars: [
-          {
-            id: 'stability',
-            title: 'Que no se rompa (Estabilidad)',
-            description: 'Pruebas automáticas para que no te llamen un viernes por la tarde porque la app ha petado.',
-          },
-          {
-            id: 'scalability',
-            title: 'Que pueda crecer (Escalabilidad)',
-            description: 'Ordenar el código para que cuando seáis 10 en el equipo, no queráis tirar el ordenador por la ventana.',
-          },
-          {
-            id: 'performance',
-            title: 'Que vaya rápido (Rendimiento)',
-            description: 'Que la web cargue volando incluso si el usuario tiene un móvil patata y mala cobertura.',
-          },
-        ],
-      },
       timeline: {
         title: 'Mi Historial (XP)',
         subtitle: '18 años picando código. Las modas cambian, pero lo importante es siempre lo mismo.',
