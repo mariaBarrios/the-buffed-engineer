@@ -7,6 +7,7 @@ interface SectionShellProps {
   title?: string;
   subtitle?: string;
   eyebrow?: string;
+  headerAction?: ReactNode;
   children: ReactNode;
 }
 
@@ -15,6 +16,7 @@ export const SectionShell = ({
   title = '',
   subtitle = '',
   eyebrow = 'BUFFED ARCHITECT MODE',
+  headerAction,
   children,
 }: SectionShellProps) => {
   const showHeader = title.trim().length > 0;
@@ -31,8 +33,17 @@ export const SectionShell = ({
     >
       {showHeader ? (
         <header className={styles.section__header}>
-          {showEyebrow ? (
-            <p className={styles.section__eyebrow}>{eyebrow}</p>
+          {showEyebrow || headerAction ? (
+            <div className={styles.section__headerTop}>
+              {showEyebrow ? (
+                <p className={styles.section__eyebrow}>{eyebrow}</p>
+              ) : (
+                <span />
+              )}
+              {headerAction ? (
+                <div className={styles.section__headerAction}>{headerAction}</div>
+              ) : null}
+            </div>
           ) : null}
           <h2 className={styles.section__title}>{title}</h2>
           {subtitle.trim() ? (

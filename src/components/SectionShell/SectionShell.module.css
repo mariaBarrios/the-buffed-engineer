@@ -14,12 +14,24 @@
   margin-bottom: 1.8rem;
 }
 
+.section__headerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
 .section__eyebrow {
   margin: 0;
   font-size: var(--text-caption);
   letter-spacing: 0.12em;
   color: var(--color-accent-red);
   text-transform: uppercase;
+}
+
+.section__headerAction {
+  display: inline-flex;
+  align-items: center;
 }
 
 .section__title {

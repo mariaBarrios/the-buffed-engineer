@@ -5,6 +5,31 @@
   align-items: start;
 }
 
+.sectionToggle {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--glass-bg);
+  color: var(--color-text-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.sectionToggle:hover {
+  color: var(--color-accent-green);
+  border-color: var(--color-accent-green-border-soft);
+  transform: translateY(-1px);
+}
+
+.sectionToggle__icon {
+  width: 1rem;
+  height: 1rem;
+}
+
 .card__icon {
   width: 28px;
   height: 28px;
