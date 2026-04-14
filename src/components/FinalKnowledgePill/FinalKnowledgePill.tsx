@@ -18,7 +18,7 @@ const Block = ({ block }: { block: FinalSlideBlockViewModel }) => (
 );
 
 export const FinalKnowledgePill = ({ content }: FinalKnowledgePillProps) => (
-  <SectionShell id="final-pill" title={content.title} subtitle={content.subtitle} eyebrow="PILDORA FINAL">
+  <SectionShell id="final-pill" title={content.title} subtitle={content.subtitle} eyebrow="PÍLDORA FINAL">
     <div className={styles.grid}>
       <Block block={content.before} />
       <Block block={content.decisions} />
