@@ -11,5 +11,6 @@ describe('InMemoryTalkContentRepository', () => {
     expect(content.timeline.entries.length).toBeGreaterThan(0);
     expect(content.aiRails.entries.length).toBeGreaterThan(0);
     expect(content.aiEngineeringFundamentals.entries.length).toBeGreaterThan(0);
+    expect(content.finalContact.email).toContain('@');
   });
 });

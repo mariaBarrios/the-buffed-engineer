@@ -11,6 +11,7 @@ import { AIEngineeringFundamentals } from './components/AIEngineeringFundamental
 import { XpTimeline } from './components/XpTimeline/XpTimeline';
 import { TerminalManifesto } from './components/TerminalManifesto/TerminalManifesto';
 import { FinalKnowledgePill } from './components/FinalKnowledgePill/FinalKnowledgePill';
+import { FinalContact } from './components/FinalContact/FinalContact';
 import type { TalkContentViewModel } from './presentation/view-models/TalkContentViewModel';
 import styles from './App.module.css';
 
@@ -39,6 +40,7 @@ export const App = ({ content }: AppProps) => (
         <AIEngineeringFundamentals content={content.aiEngineeringFundamentals} />
         <TerminalManifesto manifesto={content.manifesto} active={true} />
         <FinalKnowledgePill content={content.finalSlide} />
+        <FinalContact content={content.finalContact} />
       </motion.main>
     </div>
   );

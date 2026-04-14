@@ -147,6 +147,19 @@ export interface FinalSlideContent {
   references: FinalSlideReference[];
 }
 
+export interface FinalContactContent {
+  title: string;
+  subtitle: string;
+  eyebrow: string;
+  badge: string;
+  thanks: string;
+  motivation: string;
+  contactPrompt: string;
+  linkedinLabel: string;
+  linkedinUrl: string;
+  email: string;
+}
+
 export interface TalkContent {
   hero: HeroContent;
   introProfile: IntroProfileContent;
@@ -160,4 +173,5 @@ export interface TalkContent {
   aiRails: AIRailsContent;
   aiEngineeringFundamentals: AIEngineeringFundamentalsContent;
   finalSlide: FinalSlideContent;
+  finalContact: FinalContactContent;
 }

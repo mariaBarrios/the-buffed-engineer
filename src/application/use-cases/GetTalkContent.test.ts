@@ -70,6 +70,18 @@ const contentFixture: TalkContent = {
     closingQuote: 'Quote',
     references: [],
   },
+  finalContact: {
+    title: 'Closing',
+    subtitle: 'closing subtitle',
+    eyebrow: 'THANK YOU',
+    badge: 'LET S BUILD WHAT MATTERS',
+    thanks: 'Gracias',
+    motivation: 'Motivation',
+    contactPrompt: 'Contact me',
+    linkedinLabel: 'LinkedIn',
+    linkedinUrl: 'https://example.com',
+    email: 'name@example.com',
+  },
 };
 
 class StubTalkContentRepository implements TalkContentRepository {

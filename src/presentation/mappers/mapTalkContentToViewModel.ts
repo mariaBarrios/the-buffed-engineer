@@ -52,4 +52,5 @@ export const mapTalkContentToViewModel = (content: TalkContent): TalkContentView
     })),
   },
   finalSlide: content.finalSlide,
+  finalContact: content.finalContact,
 });

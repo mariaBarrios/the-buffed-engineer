@@ -452,6 +452,19 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
           },
         ],
       },
+      finalContact: {
+        title: 'Cierre',
+        subtitle: 'Gracias por acompañarme en este recorrido.',
+        eyebrow: 'THANK YOU',
+        badge: "LET'S BUILD WHAT MATTERS",
+        thanks: 'Gracias por vuestro tiempo y por llegar hasta aqui.',
+        motivation:
+          'La IA potencia nuestro impacto, pero el verdadero cambio llega cuando combinamos tecnologia, criterio arquitectonico y ganas de compartir.',
+        contactPrompt: 'Si quieres saber mas o te interesa Jakala, hablemos:',
+        linkedinLabel: 'linkedin.com/in/mbg-galdeano',
+        linkedinUrl: 'https://www.linkedin.com/in/mbg-galdeano/',
+        email: 'maria.barrios@jakala.com',
+      },
     };
   }
 }

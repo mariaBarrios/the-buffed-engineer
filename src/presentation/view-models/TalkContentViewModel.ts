@@ -149,6 +149,19 @@ export interface FinalSlideViewModel {
   references: FinalSlideReferenceViewModel[];
 }
 
+export interface FinalContactViewModel {
+  title: string;
+  subtitle: string;
+  eyebrow: string;
+  badge: string;
+  thanks: string;
+  motivation: string;
+  contactPrompt: string;
+  linkedinLabel: string;
+  linkedinUrl: string;
+  email: string;
+}
+
 export interface TalkContentViewModel {
   hero: HeroViewModel;
   introProfile: IntroProfileViewModel;
@@ -162,4 +175,5 @@ export interface TalkContentViewModel {
   aiRails: AIRailsViewModel;
   aiEngineeringFundamentals: AIEngineeringFundamentalsViewModel;
   finalSlide: FinalSlideViewModel;
+  finalContact: FinalContactViewModel;
 }
