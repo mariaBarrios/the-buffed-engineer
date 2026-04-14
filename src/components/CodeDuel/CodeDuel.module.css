@@ -1,15 +1,15 @@
 .duel {
   display: grid;
-  gap: 1.5rem;
   grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 .duel__panel {
   min-width: 0;
+  padding: 1rem;
   border-radius: 1rem;
   border: 1px solid var(--color-border-soft);
   background: var(--surface-card);
-  padding: 1rem;
   transition: border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
 }
 
@@ -31,8 +31,8 @@
 
 .duel__header {
   display: flex;
-  gap: 0.7rem;
   align-items: center;
+  gap: 0.7rem;
   margin-bottom: 0.8rem;
 }
 
@@ -70,11 +70,11 @@
 
 .duel__summary {
   display: flex;
-  gap: 0.7rem;
   align-items: center;
+  gap: 0.7rem;
   margin-bottom: 0.8rem;
-  cursor: pointer;
   list-style: none;
+  cursor: pointer;
 }
 
 .duel__summary svg {

@@ -3,8 +3,8 @@
   margin: 0 auto;
   width: min(1080px, 92vw);
   padding: 2.8rem;
-  border-radius: 1.25rem;
   border: 1px solid var(--color-border-strong);
+  border-radius: 1.25rem;
   background: var(--glass-bg);
   box-shadow: var(--shadow-glass);
   backdrop-filter: blur(12px);
@@ -36,17 +36,17 @@
 
 .section__title {
   margin: 0.4rem 0 0.6rem;
-  font-size: clamp(var(--text-title-sm), 2.8vw, var(--text-title-md));
-  font-family: var(--font-sans);
-  line-height: var(--leading-tight);
   color: var(--color-text-strong);
+  font-family: var(--font-sans);
+  font-size: clamp(var(--text-title-sm), 2.8vw, var(--text-title-md));
+  line-height: var(--leading-tight);
 }
 
 .section__subtitle {
   margin: 0;
   color: var(--color-text-soft);
-  font-size: var(--text-lead);
   line-height: var(--leading-normal);
+  font-size: var(--text-lead);
 }
 
 .section__body {

@@ -4,7 +4,7 @@
 }
 
 .app__content {
-  padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(4rem, 10vw, 6rem);
   display: grid;
   gap: clamp(2.25rem, 5vw, 3.75rem);
+  padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(4rem, 10vw, 6rem);
 }

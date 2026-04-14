@@ -1,27 +1,27 @@
 .grid {
   display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
 .sectionToggle {
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 999px;
-  border: 1px solid var(--color-border-strong);
-  background: var(--glass-bg);
-  color: var(--color-text-soft);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: var(--glass-bg);
   cursor: pointer;
+  color: var(--color-text-soft);
   transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .sectionToggle:hover {
-  color: var(--color-accent-green);
   border-color: var(--color-accent-green-border-soft);
+  color: var(--color-accent-green);
   transform: translateY(-1px);
 }
 
@@ -43,10 +43,10 @@
 }
 
 .card__checklist {
-  margin: 0;
-  padding-left: 1.1rem;
   display: grid;
   gap: 0.38rem;
+  margin: 0;
+  padding-left: 1.1rem;
   color: var(--color-text-dim);
   font-size: var(--text-meta);
 }
@@ -54,25 +54,25 @@
 .card__example {
   margin: 0.2rem 0;
   padding: 0.75rem;
-  background: var(--surface-accent-green-soft);
-  border-radius: 0.5rem;
   border: 1px dashed var(--color-accent-green-border-soft);
+  border-radius: 0.5rem;
+  background: var(--surface-accent-green-soft);
   color: var(--color-text-soft);
   font-size: var(--text-meta);
   line-height: var(--leading-normal);
 }
 
 .card__example strong {
-  color: var(--color-accent-green);
   display: block;
   margin-bottom: 0.25rem;
+  color: var(--color-accent-green);
 }
 
 .card__outcome {
   margin: 0.1rem 0 0;
-  color: var(--color-text-soft);
-  border-left: 3px solid var(--color-accent-green);
   padding-left: 0.65rem;
+  border-left: 3px solid var(--color-accent-green);
+  color: var(--color-text-soft);
   font-size: var(--text-lead);
 }
 

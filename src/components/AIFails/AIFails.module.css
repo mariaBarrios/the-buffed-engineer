@@ -1,8 +1,8 @@
 .grid {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
 .card__icon {
@@ -18,12 +18,12 @@
 }
 
 .card__example {
-  background: var(--surface-card-soft);
   padding: 1rem;
-  border-radius: 8px;
-  font-size: var(--text-base);
-  color: var(--color-text-soft);
   border-left: 3px solid var(--color-accent-pink);
+  border-radius: 8px;
+  background: var(--surface-card-soft);
+  color: var(--color-text-soft);
+  font-size: var(--text-base);
 }
 
 .card__example strong {
@@ -31,12 +31,12 @@
 }
 
 .card__solution {
-  background: var(--surface-accent-green-soft);
   padding: 1rem;
-  border-radius: 8px;
-  font-size: var(--text-base);
-  color: var(--color-text-soft);
   border-left: 3px solid var(--color-accent-green);
+  border-radius: 8px;
+  background: var(--surface-accent-green-soft);
+  color: var(--color-text-soft);
+  font-size: var(--text-base);
 }
 
 .card__solution strong {

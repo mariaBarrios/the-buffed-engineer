@@ -1,8 +1,8 @@
 .profile {
   display: grid;
+  align-items: start;
   grid-template-columns: minmax(220px, 320px) 1fr;
   gap: 1.5rem;
-  align-items: start;
 }
 
 .profile__media {
@@ -14,8 +14,8 @@
   margin: 0;
   border: 1px solid var(--color-border-strong);
   border-radius: 1rem;
-  overflow: hidden;
   background: var(--surface-card);
+  overflow: hidden;
 }
 
 .profile__photo {
@@ -32,11 +32,11 @@
 }
 
 .profile__name {
+  color: var(--color-text-strong);
   font-size: clamp(var(--text-title-sm), 2.8vw, var(--text-title-md));
   font-weight: 700;
   letter-spacing: 0.01em;
   line-height: var(--leading-tight);
-  color: var(--color-text-strong);
 }
 
 .profile__nameAccent {
@@ -56,11 +56,11 @@
 }
 
 .profile__logoWrap {
-  padding: 0.8rem;
-  border-radius: 0.8rem;
-  border: 1px solid var(--color-border-strong);
-  background: var(--surface-contrast);
   width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 0.8rem;
+  background: var(--surface-contrast);
 }
 
 .profile__logo {

@@ -1,8 +1,8 @@
 .grid {
   display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
 .card__icon {
@@ -27,9 +27,9 @@
 .card__example {
   margin: 0.2rem 0 0;
   padding: 0.7rem;
-  background: var(--surface-accent-green-soft);
   border: 1px dashed var(--color-accent-green-border-soft);
   border-radius: 0.5rem;
+  background: var(--surface-accent-green-soft);
   color: var(--color-text-soft);
   font-size: var(--text-meta);
 }

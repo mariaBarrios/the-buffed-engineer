@@ -1,8 +1,8 @@
 .hero {
   position: relative;
-  min-height: 100vh;
   display: grid;
   place-items: center;
+  min-height: 100vh;
   overflow: hidden;
   padding: 2rem;
 }
@@ -20,33 +20,33 @@
   position: relative;
   z-index: 1;
   width: min(880px, 92vw);
-  box-sizing: border-box;
-  text-align: center;
   padding: clamp(1.4rem, 2.8vw, 3rem);
   border: 1px solid var(--color-border-strong);
   border-radius: 1.4rem;
+  box-sizing: border-box;
   background: var(--glass-bg);
   box-shadow: var(--shadow-glass);
   backdrop-filter: blur(16px);
+  text-align: center;
 }
 
 .hero__tag {
   margin: 0;
   color: var(--color-accent-red);
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
   font-size: var(--text-caption);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .hero__title {
   margin: 0.9rem 0 0.7rem;
+  color: var(--color-accent-pink);
+  text-shadow: 0 0 22px rgb(236 72 153 / 35%);
   font-family: var(--font-sans);
   font-size: clamp(var(--text-title-md), 5.5vw, var(--text-display));
   line-height: var(--leading-tight);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--color-accent-pink);
-  text-shadow: 0 0 22px rgb(236 72 153 / 35%);
 }
 
 .hero__subtitle {
@@ -57,11 +57,11 @@
 }
 
 .hero__visual {
-  margin-top: 1.4rem;
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
   flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
 }
 
 .hero__chip {
