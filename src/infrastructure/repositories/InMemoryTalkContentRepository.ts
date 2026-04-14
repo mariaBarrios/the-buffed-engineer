@@ -18,7 +18,7 @@ const aiSnippetCode = `<!-- IA (funciona hoy, lloras mañana) -->
   </button>
 </div>`;
 
-const architectSnippetCode = `<!-- Tú, pero Buffeado -->
+const architectSnippetCode = `<!-- Tú, pero Buffeado (Semantica, Accesibilidad, mantenibilidad y escalabilidad de estilos CSS) -->
 <style>
   .user-card {
     display: flex;
