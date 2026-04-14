@@ -72,3 +72,14 @@ export default defineConfig([
 ])
 ```
 
+## Recursos de IA para estudiantes
+
+Este repositorio incluye artefactos didacticos para mostrar como trabajar con agentes de forma profesional:
+
+- **Guia de agentes**: [`AGENTS.md`](./AGENTS.md)
+- **Regla global de guardrails**: [`.cursor/rules/project-guardrails.mdc`](./.cursor/rules/project-guardrails.mdc)
+- **Regla de estilo React + contenido**: [`.cursor/rules/react-talk-content-style.mdc`](./.cursor/rules/react-talk-content-style.mdc)
+- **Skill de preparacion de demo**: [`.cursor/skills/preparar-demo-charla/SKILL.md`](./.cursor/skills/preparar-demo-charla/SKILL.md)
+
+Sugerencia para clase: mostrar estos cuatro archivos como ejemplo de "autonomia con limites" (skills + reglas + agentes + validacion).
+

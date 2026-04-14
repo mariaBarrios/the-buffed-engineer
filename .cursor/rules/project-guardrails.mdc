@@ -1,0 +1,27 @@
+---
+description: Guardrails base para cambios seguros y explicables en este proyecto.
+alwaysApply: true
+---
+
+# Guardrails del proyecto
+
+## Objetivo
+
+Mantener cambios pequenos, comprensibles y faciles de revisar por estudiantes.
+
+## Reglas operativas
+
+1. Haz cambios de alcance acotado: evita refactors grandes si el objetivo es puntual.
+2. Manten separacion por capas:
+   - `domain`: contratos y entidades,
+   - `infrastructure`: repositorios/adaptadores,
+   - `presentation` + `components`: vista y composicion UI.
+3. Si cambias contenido de la charla, conserva el tono didactico en espanol.
+4. Antes de cerrar una tarea, valida como minimo lint o tests relevantes.
+5. Si aparece un cambio inesperado fuera de alcance, para y consulta.
+
+## Checklist rapido antes de finalizar
+
+- [ ] El cambio respeta el alcance pedido.
+- [ ] No se rompen contratos de tipos (`TalkContent`, view-models, props).
+- [ ] El diff es legible para una revision docente.

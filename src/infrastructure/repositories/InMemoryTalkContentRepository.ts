@@ -226,7 +226,7 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
             title: 'Amnesia de Contexto',
             description: 'Olvida reglas de negocio o convenciones del proyecto que le explicaste hace 10 mensajes.',
             example: 'Vuelve a usar `var` o `any` a pesar de que acordasteis usar tipado estricto y `const/let` al principio de la sesión.',
-            solution: 'Mantén el contexto fresco. Usa reglas de sistema (.cursorrules) o recuérdale las restricciones clave en cada prompt complejo.',
+            solution: 'Mantén el contexto fresco. Usa reglas en `.cursor/rules/*.mdc` para normas persistentes y `AGENTS.md` para el flujo operativo del equipo; además, recuérdale restricciones clave en prompts complejos.',
           }
         ],
       },
@@ -305,7 +305,7 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
               'Reglas de stop-and-ask ante ambigüedad o cambios inesperados.',
               'Plantillas para PR, handoff y comunicación de riesgos.',
             ],
-            example: 'Añadir en las reglas del proyecto (`.cursorrules`): "Nunca uses `any` en TypeScript. Si no conoces el tipo, pide aclaración antes de generar el código".',
+            example: 'Añadir una regla en `.cursor/rules/typescript-standards.mdc`: "Nunca uses `any` en TypeScript. Si no conoces el tipo, pide aclaración antes de generar el código".',
             outcome: 'Menos fallos por falta de contexto y decisiones más trazables.',
           },
           {
@@ -316,7 +316,7 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
               'Quita instrucciones vagas y añade casos borde con ejemplos.',
               'Revisa semanalmente qué Skills/agentes aportan valor real.',
             ],
-            example: 'Si el agente suele inventarse clases de Tailwind que no existen, añadir inmediatamente una regla al `.cursorrules` obligándole a consultar el archivo `tailwind.config.js` antes de estilar.',
+            example: 'Si el agente suele inventarse clases de Tailwind que no existen, crea una regla en `.cursor/rules/frontend-tailwind.mdc` que exija revisar `tailwind.config.js` y documenta el checklist de validación en `AGENTS.md`.',
             outcome: 'Una IA más fiable, predecible y útil conforme avanza el proyecto.',
           },
         ],
@@ -428,6 +428,22 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
           {
             label: 'Issue #3 — Fase 2: Roadmap técnico para la charla',
             url: 'https://github.com/mariaBarrios/the-buffed-architect/issues/3',
+          },
+          {
+            label: 'AGENTS.md — Guía de agentes del proyecto',
+            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/AGENTS.md',
+          },
+          {
+            label: 'Rule — project-guardrails.mdc',
+            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/rules/project-guardrails.mdc',
+          },
+          {
+            label: 'Rule — react-talk-content-style.mdc',
+            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/rules/react-talk-content-style.mdc',
+          },
+          {
+            label: 'Skill — preparar-demo-charla',
+            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/skills/preparar-demo-charla/SKILL.md',
           },
         ],
       },

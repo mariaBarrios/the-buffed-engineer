@@ -1,0 +1,24 @@
+---
+description: Convenciones para tocar componentes React y contenido de la presentacion.
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Estilo React + contenido de charla
+
+## Componentes
+
+1. Mantener componentes funcionales, con props tipadas y sin logica innecesaria en la vista.
+2. Evitar duplicar estructura: reutiliza componentes ya existentes cuando el patron sea similar.
+3. Si un bloque crece mucho, considera extraer subcomponentes con nombres claros.
+
+## Contenido de charla
+
+1. Mensajes cortos, directos y con enfoque practico.
+2. Prioriza ejemplos reales (fallo + correccion) frente a teoria abstracta.
+3. Conserva consistencia terminologica: "arquitectura", "guardrails", "criterio", "calidad".
+
+## No hacer
+
+- No mezclar decisiones de dominio dentro de componentes UI.
+- No introducir tecnicismos sin contexto si el texto va dirigido a estudiantes.
