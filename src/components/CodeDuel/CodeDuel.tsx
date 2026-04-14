@@ -13,8 +13,6 @@ interface CodeDuelProps {
 
 const syntaxContainerStyle: CSSProperties = {
   margin: 0,
-  maxHeight: '30vh',
-  overflow: 'auto',
   padding: '0.9rem',
   borderRadius: '0.7rem',
   background: 'rgb(2 4 5 / 92%)',

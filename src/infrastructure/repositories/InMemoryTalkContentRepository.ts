@@ -18,7 +18,7 @@ const aiSnippetCode = `<!-- IA (funciona hoy, lloras mañana) -->
   </button>
 </div>`;
 
-const architectSnippetCode = `<!-- Tú, pero Buffeado (semántico, accesible y responsive) -->
+const architectSnippetCode = `<!-- Tú, pero Buffeado -->
 <style>
   .user-card {
     display: flex;
@@ -154,7 +154,7 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
           code: aiSnippetCode,
         },
         architectSnippet: {
-          label: 'Tú, pero Buffeado (semántico, accesible y responsive)',
+          label: 'Tú, pero Buffeado',
           language: 'html',
           code: architectSnippetCode,
         },
@@ -187,17 +187,6 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
             stack: 'Copilot / Agents',
             insight: 'El Agente te escribe el código, pero tú tienes que saber si es una basura o si sirve para producción.',
           },
-        ],
-      },
-      manifesto: {
-        title: 'Las Reglas del Juego',
-        prompt: 'cat reglas_para_sobrevivir.txt',
-        lines: [
-          '1) Usa la IA para lo aburrido, pero usa tu cerebro para decidir cómo se hacen las cosas.',
-          '2) Piensa la estructura antes de ponerte a tirar líneas de código a lo loco.',
-          '3) Haz tests. En serio. Es la única forma de dormir tranquilo cuando subes algo a producción.',
-          '4) Si tu app va lenta, a nadie le importa lo bonita que sea. La velocidad es clave.',
-          '5) La IA es tu copiloto dopado, no tu sustituto. El que manda eres tú.',
         ],
       },
       aiFails: {
@@ -327,96 +316,114 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
           'Tres capas combinadas para que el agente recuerde contexto, siga proceso y ejecute cada tarea con foco.',
         layers: [
           {
-            title: 'Capa 1: Convenciones persistentes',
-            objective: 'Fija normas técnicas estables para que el agente no improvise en cada sesión.',
-            useWhen: 'Reglas que deben aplicarse siempre o por tipo de archivo.',
+            title: 'Capa 1: El manual de estilo de la empresa',
+            objective: 'Fija las normas inamovibles (como la tipografía corporativa) para que el agente no improvise.',
+            useWhen: 'Reglas de fondo que garantizan el sello de la empresa en todo el código.',
             artifact: '.cursor/rules/*.mdc',
             example:
-              'Crear `typescript-standards.mdc` para prohibir `any` y exigir tipos explícitos en fronteras de módulo.',
+              'Ej. "En esta agencia siempre usamos TypeScript y nunca dejamos variables sin tipar".',
           },
           {
-            title: 'Capa 2: Flujo operativo del equipo',
+            title: 'Capa 2: El proceso de calidad y los SOPs (Skills)',
             objective:
-              'Define cómo trabajar: validaciones mínimas, comunicación de riesgos y cuándo detenerse para pedir contexto.',
-            useWhen: 'Comportamientos de ejecución que quieres repetir en todas las tareas.',
-            artifact: 'AGENTS.md',
+              'Define el checklist general de la empresa y los manuales paso a paso (Skills) para tareas complejas.',
+            useWhen: 'Protocolos operativos y flujos de trabajo que el trabajador consulta al hacer una tarea específica.',
+            artifact: 'AGENTS.md y Skills (.cursor/skills/*)',
             example:
-              'Documentar checklist obligatorio (`lint`, tests y revisión del diff) más reglas de stop-and-ask.',
+              'Ej. "Antes de entregar, pasa los tests (AGENTS). Si te toca hacer una subida a producción, sigue el manual de despliegue (Skill)".',
           },
           {
-            title: 'Capa 3: Instrucción táctica por tarea',
-            objective: 'Acota el alcance del trabajo para evitar refactors innecesarios o cambios laterales.',
-            useWhen: 'Cada petición concreta con restricciones de alcance y criterios de éxito.',
+            title: 'Capa 3: El ticket de la tarea',
+            objective: 'Acota el encargo específico de hoy, como un mensaje de Slack o un ticket de Jira.',
+            useWhen: 'La instrucción exacta del momento, con límites claros de qué tocar y qué no.',
             artifact: 'Prompt de la tarea',
             example:
-              'Pedir: "Corrige solo este bug de validación en `CheckoutForm`, sin cambiar arquitectura ni estilos".',
+              'Ej. "Arregla este error en el formulario de contacto. Solo toca la validación, no refactorices el resto".',
+          },
+        ],
+        references: [
+          {
+            label: 'AGENTS.md — Guía de agentes del proyecto',
+            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/AGENTS.md',
+          },
+          {
+            label: 'Rule — project-guardrails.mdc',
+            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/rules/project-guardrails.mdc',
+          },
+          {
+            label: 'Rule — react-talk-content-style.mdc',
+            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/rules/react-talk-content-style.mdc',
+          },
+          {
+            label: 'Skill — preparar-demo-charla',
+            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/skills/preparar-demo-charla/SKILL.md',
           },
         ],
       },
       aiEngineeringFundamentals: {
         title: 'Ingeniería antes del prompt',
         subtitle:
-          'Lo que separa a quien usa la IA como acelerador de quien la usa como excusa para soltar código frágil: criterio, límites claros y hábitos de equipo.',
+          'Lo que diferencia a un ingeniero de un "pasador de prompts": criterio técnico, saber poner límites a la IA y no apagar el cerebro al programar.',
         entries: [
           {
             title: 'Arquitectura',
             description:
-              'La IA genera piezas; la arquitectura define cómo encajan, qué puede cambiar y qué no. Sin ese mapa mental, cada prompt es una apuesta.',
+              'La IA te genera piezas de Lego sueltas, pero tú decides qué vas a construir. Si no tienes claro el diseño de tu sistema antes de pedir código, terminarás con un monstruo imposible de mantener.',
             checklist: [
-              'Límites entre módulos, capas y responsabilidades antes de pedir implementación.',
-              'Contratos estables (APIs, eventos, datos) para que el modelo no “invente” acoplamientos.',
-              'Decisiones explícitas: trade-offs, no solo “código que compila”.',
+              'Define bien las capas y responsabilidades (ej. separar BD de la interfaz) antes de pedirle código a la IA.',
+              'Fija los contratos (interfaces, endpoints de tu API) para que la IA no se invente cómo se comunican las partes.',
+              'Toma tú las decisiones de diseño importantes; no te conformes con "mientras compile me vale".',
             ],
             outcome:
-              'Pides implementación acotada y revisable: la IA rellena huecos, no redefine el sistema en cada mensaje.',
+              'Le pides a la IA que implemente piezas pequeñas y concretas. La IA rellena los huecos, pero tú mantienes el control del proyecto.',
           },
           {
             title: 'Testing',
             description:
-              'Los tests son el contrato entre tu intención y lo que la IA escribe. Sin ellos, no sabes si el cambio es mejora o regresión disfrazada.',
+              'Los tests son tu red de seguridad. Si dejas que la IA escriba código sin tener tests que lo validen, jugarás a la ruleta rusa cada vez que subas a producción.',
             checklist: [
-              'Pruebas que protejan reglas de negocio y rutas críticas, no solo “happy path”.',
-              'Feedback rápido: unitarias + un mínimo de integración donde duele fallar.',
-              'La IA puede bosquejar tests; tú validas aserciones, datos y casos límite.',
+              'Crea tests que comprueben la lógica importante, no solo el "happy path" donde todo sale bien.',
+              'Busca feedback rápido: haz tests unitarios que te avisen al instante si la IA ha roto algo.',
+              'La IA te puede ayudar a escribir los tests, pero tú debes revisar que de verdad estén comprobando lo que toca.',
             ],
             outcome:
-              'Iteras con la IA en bucles cortos con señal clara: verde/rojo te dice si el modelo se ha pasado de listo.',
+              'Puedes iterar rapidísimo con la IA. Si el test está en verde, avanzas; si está en rojo, sabes que el modelo ha alucinado.',
           },
           {
             title: 'Buenas prácticas',
             description:
-              'Versionado, revisiones, observabilidad, seguridad básica y accesibilidad no son “luego”: son lo que hace que el código generado sea profesional.',
+              'Git, revisiones de código y seguridad no son cosas para "cuando haya tiempo". Son lo que diferencia un proyecto de clase de un software profesional real.',
             checklist: [
-              'Commits y PRs pequeños; diff legible frente a megacambios opacos.',
-              'Revisar siempre secretos, permisos, validación de entrada y errores visibles.',
-              'Estándares del equipo (lint, formato, convenciones) como red de seguridad.',
+              'Haz commits pequeños y con sentido. Si le pides a la IA que te haga medio proyecto de golpe, nadie podrá revisar ese PR.',
+              'Ojo con la seguridad: revisa que la IA no haya dejado contraseñas en el código o agujeros de seguridad básicos.',
+              'Usa linters y formateadores (ESLint, Prettier) para que el código de la IA siga el mismo estilo que el tuyo.',
             ],
             outcome:
-              'La IA encaja en un flujo adulto: lo que produce entra por la misma puerta de calidad que tu código manual.',
+              'El código que genera la IA pasa por los mismos filtros de calidad que si lo hubieras escrito tú a mano.',
           },
           {
             title: 'Clean Code',
             description:
-              'Nombres honestos, funciones cortas, dependencias explícitas y menos “magia” facilitan que tú —y la IA en la siguiente sesión— entendáis el mismo archivo.',
+              'Si tu código es un espagueti ilegible, la IA se va a liar igual que tú. Un código limpio y ordenado ayuda a que el modelo entienda mejor qué le estás pidiendo.',
             checklist: [
-              'Eliminar duplicación ruidosa y nombres que esconden efectos secundarios.',
-              'Mantener niveles de abstracción coherentes en un mismo módulo.',
-              'Preferir claridad a astucia: el próximo lector puede ser otra versión del modelo.',
+              'Usa nombres de variables que expliquen qué hacen, sin abreviaturas raras ni funciones de 500 líneas.',
+              'Mantén el código ordenado. Si la IA tiene que leer un archivo caótico, te devolverá más caos.',
+              'Busca código simple y directo en lugar de soluciones "súper ingeniosas" que nadie entiende.',
             ],
             outcome:
-              'Los prompts apuntan a sitios con intención legible; menos retrabajo y menos refactors salvajes.',
+              'Tus prompts son más efectivos porque el contexto que le pasas a la IA es claro. Menos alucinaciones y menos tiempo arreglando desastres.',
           },
           {
             title: 'Extreme Programming (XP)',
             description:
-              'XP es ritmo y humanos: feedback continuo, diseño simple y coraje para decir “esto no lo mergeamos”. La IA no sustituye el par ni la conversación sobre valor.',
+              'El desarrollo de software va de personas resolviendo problemas, no solo de picar código. La IA te ayuda a teclear más rápido, pero no sustituye hablar con tu equipo.',
             checklist: [
-              'Integración continua y entregas pequeñas para no acumular sorpresas.',
-              'Pairing o revisión en pareja cuando el cambio es delicado o poco familiar.',
-              'Refactor guiado por tests; simplificar antes de añadir features con IA.',
+              'Integra tu código a menudo (CI/CD) para no encontrarte con conflictos gigantes el día de la entrega.',
+              'Haz "Pair Programming" con tus compañeros cuando el código generado por la IA sea complejo o crítico.',
+              'Refactoriza poco a poco apoyándote en los tests, antes de pedirle a la IA que añada nuevas funcionalidades.',
             ],
             outcome:
-              'La IA acelera el teclado; XP mantiene el rumbo: calidad sostenible y equipo alineado con el producto.',
+              'Usas la IA para quitarte el trabajo repetitivo, pero mantienes la comunicación y el trabajo en equipo que de verdad aporta valor.',
           },
         ],
       },
@@ -460,22 +467,6 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
           {
             label: 'Issue #3 — Fase 2: Roadmap técnico para la charla',
             url: 'https://github.com/mariaBarrios/the-buffed-architect/issues/3',
-          },
-          {
-            label: 'AGENTS.md — Guía de agentes del proyecto',
-            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/AGENTS.md',
-          },
-          {
-            label: 'Rule — project-guardrails.mdc',
-            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/rules/project-guardrails.mdc',
-          },
-          {
-            label: 'Rule — react-talk-content-style.mdc',
-            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/rules/react-talk-content-style.mdc',
-          },
-          {
-            label: 'Skill — preparar-demo-charla',
-            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/skills/preparar-demo-charla/SKILL.md',
           },
         ],
       },

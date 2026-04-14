@@ -45,9 +45,10 @@
 .contact__thanks {
   margin: 0;
   color: var(--color-text-strong);
-  font-size: var(--text-lead);
-  line-height: var(--leading-normal);
-  font-weight: 700;
+  font-family: var(--font-sans);
+  font-size: clamp(var(--text-title-sm), 2.8vw, var(--text-title-md));
+  line-height: var(--leading-tight);
+  font-weight: 800;
 }
 
 .contact__motivation {

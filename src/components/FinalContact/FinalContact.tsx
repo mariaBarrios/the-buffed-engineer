@@ -10,9 +10,6 @@ interface FinalContactProps {
 export const FinalContact = ({ content }: FinalContactProps) => (
   <SectionShell
     id="final-contact"
-    title={content.title}
-    subtitle={content.subtitle}
-    eyebrow={content.eyebrow}
   >
     <div className={styles.contact}>
       <div className={styles.contact__badge}>

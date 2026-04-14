@@ -21,7 +21,6 @@ export const mapTalkContentToViewModel = (content: TalkContent): TalkContentView
   },
   codeDuel: content.codeDuel,
   timeline: content.timeline,
-  manifesto: content.manifesto,
   aiFails: {
     ...content.aiFails,
     entries: content.aiFails.entries.map((entry) => ({

@@ -9,7 +9,6 @@ import { AIRails } from './components/AIRails/AIRails';
 import { ContextStrategy } from './components/ContextStrategy/ContextStrategy';
 import { AIEngineeringFundamentals } from './components/AIEngineeringFundamentals/AIEngineeringFundamentals';
 import { XpTimeline } from './components/XpTimeline/XpTimeline';
-import { TerminalManifesto } from './components/TerminalManifesto/TerminalManifesto';
 import { FinalKnowledgePill } from './components/FinalKnowledgePill/FinalKnowledgePill';
 import { FinalContact } from './components/FinalContact/FinalContact';
 import type { TalkContentViewModel } from './presentation/view-models/TalkContentViewModel';
@@ -38,7 +37,6 @@ export const App = ({ content }: AppProps) => (
         <AIRails content={content.aiRails} />
         <ContextStrategy content={content.contextStrategy} />
         <AIEngineeringFundamentals content={content.aiEngineeringFundamentals} />
-        <TerminalManifesto manifesto={content.manifesto} active={true} />
         <FinalKnowledgePill content={content.finalSlide} />
         <FinalContact content={content.finalContact} />
       </motion.main>

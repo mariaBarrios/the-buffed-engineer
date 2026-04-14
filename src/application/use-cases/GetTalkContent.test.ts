@@ -31,11 +31,6 @@ const contentFixture: TalkContent = {
     subtitle: 'timeline subtitle',
     entries: [],
   },
-  manifesto: {
-    title: 'manifesto',
-    prompt: 'cat file',
-    lines: ['line 1'],
-  },
   aiFails: {
     title: 'fails',
     subtitle: 'fails subtitle',

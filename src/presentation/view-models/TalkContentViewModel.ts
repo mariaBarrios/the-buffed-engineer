@@ -29,12 +29,6 @@ export interface TimelineViewModel {
   entries: TimelineEntryViewModel[];
 }
 
-export interface ManifestoViewModel {
-  title: string;
-  prompt: string;
-  lines: string[];
-}
-
 export interface AIFailEntryViewModel {
   id: string;
   title: string;
@@ -87,10 +81,16 @@ export interface ContextStrategyLayerViewModel {
   example: string;
 }
 
+export interface ContextStrategyReferenceViewModel {
+  label: string;
+  url: string;
+}
+
 export interface ContextStrategyViewModel {
   title: string;
   subtitle: string;
   layers: ContextStrategyLayerViewModel[];
+  references?: ContextStrategyReferenceViewModel[];
 }
 
 export interface AIEngineeringFundamentalsEntryViewModel {
@@ -171,7 +171,6 @@ export interface TalkContentViewModel {
   clientProjects: ClientProjectsViewModel;
   codeDuel: CodeDuelViewModel;
   timeline: TimelineViewModel;
-  manifesto: ManifestoViewModel;
   aiFails: AIFailsViewModel;
   dailyTasks: DailyTasksViewModel;
   aiRails: AIRailsViewModel;

@@ -29,12 +29,6 @@ export interface TimelineContent {
   entries: TimelineEntry[];
 }
 
-export interface ManifestoContent {
-  title: string;
-  prompt: string;
-  lines: string[];
-}
-
 export interface AIFailEntry {
   title: string;
   description: string;
@@ -83,10 +77,16 @@ export interface ContextStrategyLayer {
   example: string;
 }
 
+export interface ContextStrategyReference {
+  label: string;
+  url: string;
+}
+
 export interface ContextStrategyContent {
   title: string;
   subtitle: string;
   layers: ContextStrategyLayer[];
+  references?: ContextStrategyReference[];
 }
 
 export interface AIEngineeringFundamentalsEntry {
@@ -168,7 +168,6 @@ export interface TalkContent {
   clientProjects: ClientProjectsContent;
   codeDuel: CodeDuelContent;
   timeline: TimelineContent;
-  manifesto: ManifestoContent;
   aiFails: AIFailsContent;
   dailyTasks: DailyTasksContent;
   aiRails: AIRailsContent;

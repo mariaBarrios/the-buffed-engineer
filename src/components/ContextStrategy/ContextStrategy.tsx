@@ -37,5 +37,20 @@ export const ContextStrategy = ({ content }: ContextStrategyProps) => (
         );
       })}
     </div>
+
+    {content.references && content.references.length > 0 && (
+      <div className={styles.references}>
+        <p className={styles.references__title}>Documentación y reglas del proyecto:</p>
+        <ul className={styles.references__list}>
+          {content.references.map((reference) => (
+            <li key={reference.url}>
+              <a href={reference.url} target="_blank" rel="noreferrer">
+                {reference.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
   </SectionShell>
 );
