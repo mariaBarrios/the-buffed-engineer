@@ -13,7 +13,7 @@ export interface CodeDuelViewModel {
   title: string;
   subtitle: string;
   aiSnippet: CodeSnippetViewModel;
-  architectSnippet: CodeSnippetViewModel;
+  engineerSnippet: CodeSnippetViewModel;
 }
 
 export interface TimelineEntryViewModel {

@@ -13,7 +13,7 @@ export interface CodeDuelContent {
   title: string;
   subtitle: string;
   aiSnippet: CodeSnippet;
-  architectSnippet: CodeSnippet;
+  engineerSnippet: CodeSnippet;
 }
 
 export interface TimelineEntry {

@@ -47,26 +47,26 @@ export const CodeDuel = ({ duel }: CodeDuelProps) => (
       </motion.article>
 
       <motion.article
-        className={`${styles.duel__panel} ${styles['duel__panel--architect']}`}
+        className={`${styles.duel__panel} ${styles['duel__panel--engineer']}`}
         whileHover={{ y: -4 }}
       >
         <details className={styles.duel__details}>
           <summary className={styles.duel__summary}>
             <Sword size={26} />
             <div>
-              <h3>{duel.architectSnippet.label}</h3>
-              <p>{duel.architectSnippet.language.toUpperCase()}</p>
+              <h3>{duel.engineerSnippet.label}</h3>
+              <p>{duel.engineerSnippet.language.toUpperCase()}</p>
             </div>
           </summary>
           <SyntaxHighlighter
-            language={duel.architectSnippet.language}
+            language={duel.engineerSnippet.language}
             style={vscDarkPlus}
             className={styles.duel__code}
             customStyle={syntaxContainerStyle}
             wrapLongLines
             codeTagProps={{ style: { fontFamily: 'var(--font-mono)' } }}
           >
-            {duel.architectSnippet.code}
+            {duel.engineerSnippet.code}
           </SyntaxHighlighter>
         </details>
       </motion.article>

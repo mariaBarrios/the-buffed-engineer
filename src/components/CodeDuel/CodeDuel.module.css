@@ -21,11 +21,11 @@
   box-shadow: 0 0 16px rgb(236 72 153 / 24%);
 }
 
-.duel__panel--architect {
+.duel__panel--engineer {
   border-color: var(--color-accent-green-muted);
 }
 
-.duel__panel--architect:hover {
+.duel__panel--engineer:hover {
   box-shadow: 0 0 16px rgb(45 212 191 / 26%);
 }
 

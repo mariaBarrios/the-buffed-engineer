@@ -18,7 +18,7 @@ const aiSnippetCode = `<!-- IA (funciona hoy, lloras mañana) -->
   </button>
 </div>`;
 
-const architectSnippetCode = `<!-- Tú, pero Buffeado (Semantica, Accesibilidad, mantenibilidad y escalabilidad de estilos CSS) -->
+const engineerSnippetCode = `<!-- Tú, pero Buffeado (Semantica, Accesibilidad, mantenibilidad y escalabilidad de estilos CSS) -->
 <style>
   .user-card {
     display: flex;
@@ -82,7 +82,7 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
   getContent(): TalkContent {
     return {
       hero: {
-        title: 'The Buffed Architect',
+        title: 'The Buffed Engineer',
         subtitle: 'IA + cabeza = código que no explota cuando lo usa gente real',
       },
       introProfile: {
@@ -153,10 +153,10 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
           language: 'html',
           code: aiSnippetCode,
         },
-        architectSnippet: {
+        engineerSnippet: {
           label: 'Tú, pero Buffeado',
           language: 'html',
-          code: architectSnippetCode,
+          code: engineerSnippetCode,
         },
       },
       timeline: {
@@ -344,19 +344,19 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
         references: [
           {
             label: 'AGENTS.md — Guía de agentes del proyecto',
-            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/AGENTS.md',
+            url: 'https://github.com/mariaBarrios/the-buffed-engineer/blob/main/AGENTS.md',
           },
           {
             label: 'Rule — project-guardrails.mdc',
-            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/rules/project-guardrails.mdc',
+            url: 'https://github.com/mariaBarrios/the-buffed-engineer/blob/main/.cursor/rules/project-guardrails.mdc',
           },
           {
             label: 'Rule — react-talk-content-style.mdc',
-            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/rules/react-talk-content-style.mdc',
+            url: 'https://github.com/mariaBarrios/the-buffed-engineer/blob/main/.cursor/rules/react-talk-content-style.mdc',
           },
           {
             label: 'Skill — preparar-demo-charla',
-            url: 'https://github.com/mariaBarrios/the-buffed-architect/blob/main/.cursor/skills/preparar-demo-charla/SKILL.md',
+            url: 'https://github.com/mariaBarrios/the-buffed-engineer/blob/main/.cursor/skills/preparar-demo-charla/SKILL.md',
           },
         ],
       },
@@ -458,15 +458,15 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
         references: [
           {
             label: 'Issue #1 — Fase 2: Optimizar bundle con code splitting',
-            url: 'https://github.com/mariaBarrios/the-buffed-architect/issues/1',
+            url: 'https://github.com/mariaBarrios/the-buffed-engineer/issues/1',
           },
           {
             label: 'Issue #2 — Fase 2: Extraer TalkContent fuera del repositorio in-memory',
-            url: 'https://github.com/mariaBarrios/the-buffed-architect/issues/2',
+            url: 'https://github.com/mariaBarrios/the-buffed-engineer/issues/2',
           },
           {
             label: 'Issue #3 — Fase 2: Roadmap técnico para la charla',
-            url: 'https://github.com/mariaBarrios/the-buffed-architect/issues/3',
+            url: 'https://github.com/mariaBarrios/the-buffed-engineer/issues/3',
           },
         ],
       },

@@ -4,7 +4,7 @@ import type { TalkContent } from '../../domain/entities/TalkContent';
 import type { TalkContentRepository } from '../../domain/ports/TalkContentRepository';
 
 const contentFixture: TalkContent = {
-  hero: { title: 'The Buffed Architect', subtitle: 'subtitle' },
+  hero: { title: 'The Buffed Engineer', subtitle: 'subtitle' },
   introProfile: {
     nameLead: 'Soy ',
     name: 'María',
@@ -24,7 +24,7 @@ const contentFixture: TalkContent = {
     title: 'duel',
     subtitle: 'duel subtitle',
     aiSnippet: { label: 'ai', language: 'ts', code: 'console.log(1);' },
-    architectSnippet: { label: 'architect', language: 'ts', code: 'console.log(2);' },
+    engineerSnippet: { label: 'engineer', language: 'ts', code: 'console.log(2);' },
   },
   timeline: {
     title: 'timeline',
