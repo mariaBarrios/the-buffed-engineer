@@ -1,0 +1,45 @@
+.grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.card__icon {
+  width: 28px;
+  height: 28px;
+}
+
+.card__description {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-height: var(--leading-normal);
+  font-size: var(--text-base);
+}
+
+.card__checklist {
+  display: grid;
+  gap: 0.38rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-text-dim);
+  font-size: var(--text-meta);
+}
+
+.card__outcome {
+  margin: 0.1rem 0 0;
+  padding-left: 0.65rem;
+  border-left: 3px solid var(--color-accent-green);
+  color: var(--color-text-soft);
+  font-size: var(--text-lead);
+}
+
+.card__outcome strong {
+  color: var(--color-accent-green);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

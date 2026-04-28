@@ -107,6 +107,20 @@ export interface AIEngineeringFundamentalsViewModel {
   entries: AIEngineeringFundamentalsEntryViewModel[];
 }
 
+export interface ParadigmShiftEntryViewModel {
+  id: string;
+  title: string;
+  description: string;
+  checklist: string[];
+  outcome: string;
+}
+
+export interface ParadigmShiftViewModel {
+  title: string;
+  subtitle: string;
+  entries: ParadigmShiftEntryViewModel[];
+}
+
 export interface IntroProfileViewModel {
   nameLead?: string;
   name: string;
@@ -174,6 +188,7 @@ export interface TalkContentViewModel {
   aiFails: AIFailsViewModel;
   dailyTasks: DailyTasksViewModel;
   aiRails: AIRailsViewModel;
+  paradigmShift: ParadigmShiftViewModel;
   contextStrategy: ContextStrategyViewModel;
   aiEngineeringFundamentals: AIEngineeringFundamentalsViewModel;
   finalSlide: FinalSlideViewModel;

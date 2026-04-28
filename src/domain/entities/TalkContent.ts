@@ -69,6 +69,19 @@ export interface AIRailsContent {
   entries: AIRailsEntry[];
 }
 
+export interface ParadigmShiftEntry {
+  title: string;
+  description: string;
+  checklist: string[];
+  outcome: string;
+}
+
+export interface ParadigmShiftContent {
+  title: string;
+  subtitle: string;
+  entries: ParadigmShiftEntry[];
+}
+
 export interface ContextStrategyLayer {
   title: string;
   objective: string;
@@ -171,6 +184,7 @@ export interface TalkContent {
   aiFails: AIFailsContent;
   dailyTasks: DailyTasksContent;
   aiRails: AIRailsContent;
+  paradigmShift: ParadigmShiftContent;
   contextStrategy: ContextStrategyContent;
   aiEngineeringFundamentals: AIEngineeringFundamentalsContent;
   finalSlide: FinalSlideContent;
