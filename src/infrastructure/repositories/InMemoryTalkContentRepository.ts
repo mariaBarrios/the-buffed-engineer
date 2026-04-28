@@ -18,7 +18,7 @@ const aiSnippetCode = `<!-- IA (funciona hoy, lloras mañana) -->
   </button>
 </div>`;
 
-const engineerSnippetCode = `<!-- Tú, pero Buffeado (Semantica, Accesibilidad, mantenibilidad y escalabilidad de estilos CSS) -->
+const engineerSnippetCode = `<!-- Tú, pero Buffado (Semantica, Accesibilidad, mantenibilidad y escalabilidad de estilos CSS) -->
 <style>
   .user-card {
     display: flex;
@@ -83,13 +83,16 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
     return {
       hero: {
         title: 'The Buffed Engineer',
-        subtitle: 'IA + cabeza = código que no explota cuando lo usa gente real',
+        subtitle:
+          'IA + cabeza = código que no explota cuando lo usa gente real',
       },
       introProfile: {
         nameLead: 'Soy ',
         name: 'María Barrios',
-        intro: 'Me apasiona construir productos digitales útiles, mantenibles y con impacto real.',
-        experience: 'Llevo 18 años en Biko, ahora Jakala, acompañando equipos y proyectos en su evolución tecnológica.',
+        intro:
+          'Me apasiona construir productos digitales útiles, mantenibles y con impacto real.',
+        experience:
+          'Llevo 18 años en Biko, ahora Jakala, acompañando equipos y proyectos en su evolución tecnológica.',
         companyLogoSrc: '/jakala-logo.png',
         companyLogoAlt: 'Logo de Jakala',
         photoSrc: '/maria-barrios.png',
@@ -147,166 +150,280 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
       },
       codeDuel: {
         title: 'El Duelo: Copiar y Pegar de IA vs Hacerlo Bien',
-        subtitle: 'No gana el que escupe código más rápido, sino el que hace que no se rompa mañana.',
+        subtitle:
+          'No gana el que escupe código más rápido, sino el que hace que no se rompa mañana.',
         aiSnippet: {
           label: 'IA (funciona hoy, lloras mañana)',
           language: 'html',
           code: aiSnippetCode,
         },
         engineerSnippet: {
-          label: 'Tú, pero Buffeado',
+          label: 'Tú, pero Buffado',
           language: 'html',
           code: engineerSnippetCode,
         },
       },
       timeline: {
         title: 'Mi Historial (XP)',
-        subtitle: '18 años picando código. Las modas cambian, pero lo importante es siempre lo mismo.',
+        subtitle:
+          '18 años picando código. Las modas cambian, pero lo importante es siempre lo mismo.',
         entries: [
           {
             year: '2008',
             title: 'Los Inicios',
             stack: 'SAP / Enterprise',
-            insight: 'Aprendiendo a base de golpes que el código tiene que entenderlo el negocio, no solo las máquinas.',
+            insight:
+              'Aprendiendo a base de golpes que el código tiene que entenderlo el negocio, no solo las máquinas.',
           },
           {
             year: '2015',
             title: 'El Boom del Frontend',
             stack: 'Angular / SPA',
-            insight: 'Cuando las webs empezaron a ser apps completas y tuvimos que aprender a ordenarlas para no volvernos locos.',
+            insight:
+              'Cuando las webs empezaron a ser apps completas y tuvimos que aprender a ordenarlas para no volvernos locos.',
           },
           {
             year: '2019',
             title: 'La Era React',
             stack: 'React / Next.js',
-            insight: 'Componentes por todas partes, obsesión por que cargue rápido y no romper nada al actualizar.',
+            insight:
+              'Componentes por todas partes, obsesión por que cargue rápido y no romper nada al actualizar.',
           },
           {
             year: '2026',
             title: 'Programar con IA',
             stack: 'Copilot / Agents',
-            insight: 'El Agente te escribe el código, pero tú tienes que saber si es una basura o si sirve para producción.',
+            insight:
+              'El Agente te escribe el código, pero tú tienes que saber si es una basura o si sirve para producción.',
           },
         ],
       },
       aiFails: {
         title: 'Cuando la IA descarrila',
-        subtitle: 'Ejemplos reales de por qué necesitas estar al volante y no dormirte.',
+        subtitle:
+          'Ejemplos reales de por qué necesitas estar al volante y no dormirte.',
         entries: [
           {
             title: 'Alucinaciones de Librerías',
-            description: 'La IA inventa paquetes o métodos que suenan lógicos pero no existen.',
-            example: 'Te sugiere importar `useAuthentication()` de `react-router-dom` o usar un método `Array.prototype.toMagicString()` que se acaba de inventar.',
-            solution: 'Verifica siempre la documentación oficial. Si suena demasiado específico y perfecto, probablemente sea inventado.',
+            description:
+              'La IA inventa paquetes o métodos que suenan lógicos pero no existen.',
+            example:
+              'Te sugiere importar `useAuthentication()` de `react-router-dom` o usar un método `Array.prototype.toMagicString()` que se acaba de inventar.',
+            solution:
+              'Verifica siempre la documentación oficial. Si suena demasiado específico y perfecto, probablemente sea inventado.',
           },
           {
             title: 'El Bucle Infinito de Refactorización',
-            description: 'Le pides arreglar un bug y te reescribe todo el archivo cambiando la arquitectura entera.',
-            example: 'Pides corregir un typo en un botón y te devuelve el componente reescrito usando un patrón de estado complejo que no necesitas y rompe 5 tests.',
-            solution: 'Da instrucciones precisas y limita el alcance: "Solo corrige la línea 45, no cambies nada más de la estructura".',
+            description:
+              'Le pides arreglar un bug y te reescribe todo el archivo cambiando la arquitectura entera.',
+            example:
+              'Pides corregir un typo en un botón y te devuelve el componente reescrito usando un patrón de estado complejo que no necesitas y rompe 5 tests.',
+            solution:
+              'Da instrucciones precisas y limita el alcance: "Solo corrige la línea 45, no cambies nada más de la estructura".',
           },
           {
             title: 'Código Inseguro por Defecto',
-            description: 'La IA prioriza que el código funcione rápido sobre que sea seguro.',
-            example: 'Genera consultas SQL concatenando strings directamente (SQL Injection) o guarda contraseñas en texto plano en el localStorage.',
-            solution: 'Aplica siempre tus conocimientos de seguridad. Pídele explícitamente: "Escribe esto siguiendo las mejores prácticas de seguridad de OWASP".',
+            description:
+              'La IA prioriza que el código funcione rápido sobre que sea seguro.',
+            example:
+              'Genera consultas SQL concatenando strings directamente (SQL Injection) o guarda contraseñas en texto plano en el localStorage.',
+            solution:
+              'Aplica siempre tus conocimientos de seguridad. Pídele explícitamente: "Escribe esto siguiendo las mejores prácticas de seguridad de OWASP".',
           },
           {
             title: 'Amnesia de Contexto',
-            description: 'Olvida reglas de negocio o convenciones del proyecto que le explicaste hace 10 mensajes.',
-            example: 'Vuelve a usar `var` o `any` a pesar de que acordasteis usar tipado estricto y `const/let` al principio de la sesión.',
-            solution: 'Mantén el contexto fresco. Usa reglas en `.cursor/rules/*.mdc` para normas persistentes y `AGENTS.md` para el flujo operativo del equipo; además, recuérdale restricciones clave en prompts complejos.',
-          }
+            description:
+              'Olvida reglas de negocio o convenciones del proyecto que le explicaste hace 10 mensajes.',
+            example:
+              'Vuelve a usar `var` o `any` a pesar de que acordasteis usar tipado estricto y `const/let` al principio de la sesión.',
+            solution:
+              'Mantén el contexto fresco. Usa reglas en `.cursor/rules/*.mdc` para normas persistentes y `AGENTS.md` para el flujo operativo del equipo; además, recuérdale restricciones clave en prompts complejos.',
+          },
         ],
       },
       dailyTasks: {
-        title: 'El Día a Día Buffeado',
-        subtitle: 'Tareas donde la IA brilla y marca la diferencia si tienes criterio.',
+        title: 'El Día a Día Buffado',
+        subtitle:
+          'Tareas donde la IA brilla y marca la diferencia si tienes criterio.',
         tasks: [
           {
             title: 'Refactorización Segura',
-            description: 'Pasar código legacy a estándares modernos sin romper nada.',
-            example: 'Pedirle a la IA que migre un componente de clases a hooks, pero tú revisas que el ciclo de vida (useEffect) sea exacto.',
-            impact: 'Ahorras horas de teclear, pero tu criterio evita bugs sutiles de renderizado.',
+            description:
+              'Pasar código legacy a estándares modernos sin romper nada.',
+            example:
+              'Pedirle a la IA que migre un componente de clases a hooks, pero tú revisas que el ciclo de vida (useEffect) sea exacto.',
+            impact:
+              'Ahorras horas de teclear, pero tu criterio evita bugs sutiles de renderizado.',
           },
           {
             title: 'Generación de Tests Tediosos',
-            description: 'Crear la base de pruebas unitarias para casos límite.',
-            example: 'Le das una función compleja y le pides que genere los tests para todos los edge cases posibles.',
-            impact: 'Aumentas la cobertura al 100% en minutos, pero tú decides qué aserciones son realmente valiosas para el negocio.',
+            description:
+              'Crear la base de pruebas unitarias para casos límite.',
+            example:
+              'Le das una función compleja y le pides que genere los tests para todos los edge cases posibles.',
+            impact:
+              'Aumentas la cobertura al 100% en minutos, pero tú decides qué aserciones son realmente valiosas para el negocio.',
           },
           {
             title: 'Explicación de Código Alienígena',
-            description: 'Entender código antiguo o no documentado rápidamente.',
-            example: 'Pedirle a la IA: "Explícame qué hace esta regex de 4 líneas y dame 3 ejemplos de lo que matchea y lo que no".',
-            impact: 'Desbloqueas tareas de mantenimiento al instante, usando la IA como traductor de intenciones.',
+            description:
+              'Entender código antiguo o no documentado rápidamente.',
+            example:
+              'Pedirle a la IA: "Explícame qué hace esta regex de 4 líneas y dame 3 ejemplos de lo que matchea y lo que no".',
+            impact:
+              'Desbloqueas tareas de mantenimiento al instante, usando la IA como traductor de intenciones.',
           },
           {
             title: 'Automatización de Tareas Repetitivas',
-            description: 'Convertir rutinas frecuentes en Skills reutilizables guiadas por IA, sin depender de scripting manual cada vez.',
-            example: 'Definir un Skill para preparar PRs (lint, tests, formato y checklist) y pedirle al agente que lo ejecute cuando detecte cambios listos para revisar.',
-            impact: 'Estandarizas el trabajo repetitivo en minutos: la IA ejecuta el flujo y tú te centras en validar decisiones y calidad final.',
-          }
+            description:
+              'Convertir rutinas frecuentes en Skills reutilizables guiadas por IA, sin depender de scripting manual cada vez.',
+            example:
+              'Definir un Skill para preparar PRs (lint, tests, formato y checklist) y pedirle al agente que lo ejecute cuando detecte cambios listos para revisar.',
+            impact:
+              'Estandarizas el trabajo repetitivo en minutos: la IA ejecuta el flujo y tú te centras en validar decisiones y calidad final.',
+          },
         ],
       },
       aiRails: {
         title: 'Preparar el Terreno: Skills + Agentes',
-        subtitle: 'Más autonomía, menos caos: define raíles para que la IA rinda bien en proyectos reales.',
+        subtitle:
+          'Más autonomía, menos caos: define raíles para que la IA rinda bien en proyectos reales.',
         entries: [
           {
-            title: 'Integrar Skills para lo repetible',
-            description: 'Convierte tareas frecuentes en playbooks accionables para que el agente no improvise en cada sesión.',
+            title: 'Integrar Skills para lo repetitivo',
+            description:
+              'Convierte tareas frecuentes en playbooks accionables para que el agente no improvise en cada sesión.',
             checklist: [
               'Define objetivo, entradas esperadas y salida válida del Skill.',
               'Incluye ejemplos reales para reducir ambigüedad en prompts.',
               'Mantén cada Skill con una sola responsabilidad clara.',
             ],
-            example: 'Crear un Skill "Review PR" que ejecute `npm run lint`, corra los tests afectados y genere un resumen del diff antes de abrir una Pull Request.',
-            outcome: 'Menos decisiones ad hoc y resultados más consistentes entre iteraciones.',
+            example:
+              'Crear un Skill "Review PR" que ejecute `npm run lint`, corra los tests afectados y genere un resumen del diff antes de abrir una Pull Request.',
+            outcome:
+              'Menos decisiones ad hoc y resultados más consistentes entre iteraciones.',
           },
           {
             title: 'Crear agentes específicos por misión',
-            description: 'Para tareas con mucho contexto (debug, QA, migraciones), usa agentes especializados con límites explícitos.',
+            description:
+              'Para tareas con mucho contexto (debug, QA, migraciones), usa agentes especializados con límites explícitos.',
             checklist: [
               'Declara alcance, rutas que puede tocar y herramientas permitidas.',
               'Añade criterios de éxito verificables: tests, lint, checks o diff esperado.',
               'Exige una salida resumida con cambios, riesgos y validación realizada.',
             ],
-            example: 'Un agente "QA-Bot" configurado en modo lectura que revisa archivos `.spec.ts` y sugiere edge cases faltantes, sin permiso para modificar código de producción.',
-            outcome: 'Mayor autonomía con menor riesgo de romper partes no relacionadas.',
+            example:
+              'Un agente "QA-Bot" configurado en modo lectura que revisa archivos `.spec.ts` y sugiere edge cases faltantes, sin permiso para modificar código de producción.',
+            outcome:
+              'Mayor autonomía con menor riesgo de romper partes no relacionadas.',
           },
           {
             title: 'Reutilizar agentes y Skills genéricos',
-            description: 'No todo necesita un agente nuevo: combina piezas existentes para acelerar sin duplicar trabajo.',
+            description:
+              'No todo necesita un agente nuevo: combina piezas existentes para acelerar sin duplicar trabajo.',
             checklist: [
               'Prioriza reutilizar antes de construir un flujo nuevo.',
               'Combina exploración genérica + Skill específico de ejecución.',
               'Documenta cuándo usar cada opción para evitar decisiones improvisadas.',
             ],
-            example: 'En lugar de crear un agente desde cero para cada refactor, usar un agente genérico de "Exploración" para encontrar la lógica acoplada, y luego aplicar un Skill de "Extracción de Componentes" ya probado.',
-            outcome: 'Velocidad de entrega más alta manteniendo estabilidad técnica.',
+            example:
+              'En lugar de crear un agente desde cero para cada refactor, usar un agente genérico de "Exploración" para encontrar la lógica acoplada, y luego aplicar un Skill de "Extracción de Componentes" ya probado.',
+            outcome:
+              'Velocidad de entrega más alta manteniendo estabilidad técnica.',
           },
           {
             title: 'Definir guardrails de calidad',
-            description: 'La autonomía real aparece cuando hay controles simples y obligatorios antes de cerrar una tarea.',
+            description:
+              'La autonomía real aparece cuando hay controles simples y obligatorios antes de cerrar una tarea.',
             checklist: [
               'Checklist mínimo: build, tests, lint y revisión del diff.',
               'Reglas de stop-and-ask ante ambigüedad o cambios inesperados.',
               'Plantillas para PR, handoff y comunicación de riesgos.',
             ],
-            example: 'Añadir una regla en `.cursor/rules/typescript-standards.mdc`: "Nunca uses `any` en TypeScript. Si no conoces el tipo, pide aclaración antes de generar el código".',
-            outcome: 'Menos fallos por falta de contexto y decisiones más trazables.',
+            example:
+              'Añadir una regla en `.cursor/rules/typescript-standards.mdc`: "Nunca uses `any` en TypeScript. Si no conoces el tipo, pide aclaración antes de generar el código".',
+            outcome:
+              'Menos fallos por falta de contexto y decisiones más trazables.',
           },
           {
             title: 'Mejorar en ciclos cortos',
-            description: 'Itera rápido sobre errores recurrentes para reforzar los raíles del sistema.',
+            description:
+              'Itera rápido sobre errores recurrentes para reforzar los raíles del sistema.',
             checklist: [
               'Registra fallos frecuentes y conviértelos en reglas explícitas.',
               'Quita instrucciones vagas y añade casos borde con ejemplos.',
               'Revisa semanalmente qué Skills/agentes aportan valor real.',
             ],
-            example: 'Si el CSS se vuelve inconsistente entre componentes, crea una regla en `.cursor/rules/frontend-css-outside-in.mdc` para fijar orden outside-in y documenta el checklist de revisión en `AGENTS.md`.',
-            outcome: 'Una IA más fiable, predecible y útil conforme avanza el proyecto.',
+            example:
+              'Si el CSS se vuelve inconsistente entre componentes, crea una regla en `.cursor/rules/frontend-css-outside-in.mdc` para fijar orden outside-in y documenta el checklist de revisión en `AGENTS.md`.',
+            outcome:
+              'Una IA más fiable, predecible y útil conforme avanza el proyecto.',
+          },
+        ],
+      },
+      paradigmShift: {
+        title: 'El mapa antes que el código',
+        subtitle:
+          'Tu valor diferencial ya no es teclear rápido, sino entender el sistema que estás construyendo.',
+        entries: [
+          {
+            title: 'El paradigma ha cambiado',
+            description:
+              'Con la IA generando código en segundos, el cuello de botella ya no es la velocidad de escritura. Quien entiende qué construye, por qué y para quién, sigue siendo insustituible. Quien solo ejecuta prompts / tareas, es prescindible.',
+            checklist: [
+              'Pregúntate: ¿puedo explicar este sistema a alguien sin abrir el código?',
+              'Si la IA genera algo que no entiendes, para. Entender primero, iterar después.',
+              'Tu criterio técnico es el guardarraíl real; los Skills y las reglas lo codifican, pero no lo sustituyen.',
+            ],
+            outcome:
+              'Usas la IA como amplificador de tu criterio, no como sustituto de pensar.',
+          },
+          {
+            title: 'Qué estás construyendo',
+            description:
+              'Antes de escribir la primera línea, necesitas tener claro el producto: qué problema resuelve, quién lo usa, qué partes lo componen y cuáles son sus límites. Sin ese mapa, la IA te llevará a cualquier sitio.',
+            checklist: [
+              'Define el dominio del problema en una frase: ¿qué hace este sistema y qué NO hace?',
+              'Identifica las entidades clave y sus relaciones antes de pedir código a la IA.',
+              'Valida que cada funcionalidad que construyes tiene un propósito claro de negocio.',
+            ],
+            outcome:
+              'Los prompts que le das a la IA son precisos porque tú tienes clara la foto completa.',
+          },
+          {
+            title: 'Cómo interactúan las piezas',
+            description:
+              'Un sistema no es un archivo, es una red de contratos. Frontend, backend, APIs, servicios externos... Si no tienes claro quién llama a quién, qué formato espera cada parte y qué pasa cuando algo falla, la IA te generará piezas que no encajan.',
+            checklist: [
+              'Dibuja (o describe con texto) el flujo de datos end-to-end antes de implementar.',
+              'Fija los contratos entre capas (interfaces, tipos de API) antes de pedir implementaciones.',
+              'Pregúntale a la IA: "¿Qué asumes sobre el contrato entre este componente y su API?"',
+            ],
+            outcome:
+              'Detectas inconsistencias entre piezas antes de que el bug llegue a producción.',
+          },
+          {
+            title: 'Dónde se ejecuta cada parte',
+            description:
+              'Servidor, cliente, edge, worker, cron job... el entorno de ejecución cambia todo: qué puedes hacer, qué latencia tienes, qué datos tienes disponibles. La IA no sabe en qué entorno vivirá su código salvo que tú se lo digas explícitamente.',
+            checklist: [
+              'Para cada pieza nueva, identifica explícitamente: ¿esto corre en cliente o servidor?',
+              'Ten en cuenta límites del entorno: memoria, tiempo de respuesta, acceso a red o disco.',
+            ],
+            outcome:
+              'Evitas errores de entorno (acceder al DOM en servidor, importar paquetes Node en cliente) que la IA no detecta por defecto.',
+          },
+          {
+            title: 'Dónde viven los datos',
+            description:
+              'Estado local del componente, store global, caché del servidor, base de datos, localStorage, cookie... Cada dato tiene un hogar natural. Mezclarlo genera bugs difíciles de rastrear, duplicidades y problemas de sincronización que la IA perpetúa si no defines el modelo de datos primero.',
+            checklist: [
+              'Decide la fuente de verdad de cada dato antes de pedir código de estado.',
+              'Especifica en el prompt: "Este dato es efímero (estado local)", "Este dato persiste (BD)", "Este dato se puede cachear N minutos".',
+              'Revisa que la IA no duplique estado que ya existe en otra capa del sistema.',
+            ],
+            outcome:
+              'Tu modelo de datos es predecible y coherente; la IA implementa los detalles, pero la arquitectura del dato la defines tú.',
           },
         ],
       },
@@ -317,8 +434,10 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
         layers: [
           {
             title: 'Capa 1: El manual de estilo de la empresa',
-            objective: 'Fija las normas inamovibles (como la tipografía corporativa) para que el agente no improvise.',
-            useWhen: 'Reglas de fondo que garantizan el sello de la empresa en todo el código.',
+            objective:
+              'Fija las normas inamovibles (como la tipografía corporativa) para que el agente no improvise.',
+            useWhen:
+              'Reglas de fondo que garantizan el sello de la empresa en todo el código.',
             artifact: '.cursor/rules/*.mdc',
             example:
               'Ej. "En esta agencia siempre usamos TypeScript y nunca dejamos variables sin tipar".',
@@ -327,15 +446,18 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
             title: 'Capa 2: El proceso de calidad y los SOPs (Skills)',
             objective:
               'Define el checklist general de la empresa y los manuales paso a paso (Skills) para tareas complejas.',
-            useWhen: 'Protocolos operativos y flujos de trabajo que el trabajador consulta al hacer una tarea específica.',
+            useWhen:
+              'Protocolos operativos y flujos de trabajo que el trabajador consulta al hacer una tarea específica.',
             artifact: 'AGENTS.md y Skills (.cursor/skills/*)',
             example:
               'Ej. "Antes de entregar, pasa los tests (AGENTS). Si te toca hacer una subida a producción, sigue el manual de despliegue (Skill)".',
           },
           {
             title: 'Capa 3: El ticket de la tarea',
-            objective: 'Acota el encargo específico de hoy, como un mensaje de Slack o un ticket de Jira.',
-            useWhen: 'La instrucción exacta del momento, con límites claros de qué tocar y qué no.',
+            objective:
+              'Acota el encargo específico de hoy, como un mensaje de Slack o un ticket de Jira.',
+            useWhen:
+              'La instrucción exacta del momento, con límites claros de qué tocar y qué no.',
             artifact: 'Prompt de la tarea',
             example:
               'Ej. "Arregla este error en el formulario de contacto. Solo toca la validación, no refactorices el resto".',
@@ -454,14 +576,16 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
             'Narrativa técnica clara para equipo y producto.',
           ],
         },
-        closingQuote: 'La IA escribe más rápido. Tu criterio decide si eso escala.',
+        closingQuote:
+          'La IA escribe más rápido. Tu criterio decide si eso escala.',
         references: [
           {
             label: 'Issue #1 — Fase 2: Optimizar bundle con code splitting',
             url: 'https://github.com/mariaBarrios/the-buffed-engineer/issues/1',
           },
           {
-            label: 'Issue #2 — Fase 2: Extraer TalkContent fuera del repositorio in-memory',
+            label:
+              'Issue #2 — Fase 2: Extraer TalkContent fuera del repositorio in-memory',
             url: 'https://github.com/mariaBarrios/the-buffed-engineer/issues/2',
           },
           {

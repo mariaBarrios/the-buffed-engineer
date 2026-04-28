@@ -24,7 +24,11 @@ const contentFixture: TalkContent = {
     title: 'duel',
     subtitle: 'duel subtitle',
     aiSnippet: { label: 'ai', language: 'ts', code: 'console.log(1);' },
-    engineerSnippet: { label: 'engineer', language: 'ts', code: 'console.log(2);' },
+    engineerSnippet: {
+      label: 'engineer',
+      language: 'ts',
+      code: 'console.log(2);',
+    },
   },
   timeline: {
     title: 'timeline',
@@ -44,6 +48,11 @@ const contentFixture: TalkContent = {
   aiRails: {
     title: 'rails',
     subtitle: 'rails subtitle',
+    entries: [],
+  },
+  paradigmShift: {
+    title: 'paradigm',
+    subtitle: 'paradigm subtitle',
     entries: [],
   },
   contextStrategy: {

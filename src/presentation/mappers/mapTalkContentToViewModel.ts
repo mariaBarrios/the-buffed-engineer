@@ -9,7 +9,9 @@ const toId = (value: string) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
 
-export const mapTalkContentToViewModel = (content: TalkContent): TalkContentViewModel => ({
+export const mapTalkContentToViewModel = (
+  content: TalkContent
+): TalkContentViewModel => ({
   hero: content.hero,
   introProfile: content.introProfile,
   clientProjects: {
@@ -38,6 +40,13 @@ export const mapTalkContentToViewModel = (content: TalkContent): TalkContentView
   aiRails: {
     ...content.aiRails,
     entries: content.aiRails.entries.map((entry) => ({
+      ...entry,
+      id: toId(entry.title),
+    })),
+  },
+  paradigmShift: {
+    ...content.paradigmShift,
+    entries: content.paradigmShift.entries.map((entry) => ({
       ...entry,
       id: toId(entry.title),
     })),
