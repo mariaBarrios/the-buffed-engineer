@@ -4,16 +4,12 @@
   justify-items: center;
   gap: 0.9rem;
   padding: clamp(1.4rem, 3.4vw, 2rem);
-  border: 1px solid var(--color-border-strong);
   border-radius: 1.25rem;
   overflow: hidden;
   isolation: isolate;
-  background-color: var(--surface-card);
   background-image:
     radial-gradient(circle at 12% 10%, rgb(255 64 129 / 14%), transparent 42%),
-    radial-gradient(circle at 88% 82%, rgb(99 232 203 / 18%), transparent 40%),
-    linear-gradient(145deg, var(--surface-card), var(--surface-accent-green-soft));
-  box-shadow: var(--shadow-glass);
+    radial-gradient(circle at 88% 82%, rgb(99 232 203 / 18%), transparent 40%);
   text-align: center;
 }
 

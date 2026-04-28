@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <style>
+    .text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 800; font-size: 52px; fill: #2c2c2c; }
+    .icon { fill: #E52320; }
+    @media (prefers-color-scheme: dark) { 
+      .text { fill: #f0f0f0; }
+    }
+  </style>
+  <g transform="translate(60, 50)">
+    <circle cx="0" cy="-10" r="14" class="icon"/>
+    <polygon points="-8,-2 8,-2 12,24 -12,24" class="icon"/>
+  </g>
+  <text x="100" y="60%" dominant-baseline="middle" class="text" letter-spacing="-1">openbank</text>
+</svg>

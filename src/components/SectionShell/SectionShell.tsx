@@ -15,7 +15,7 @@ export const SectionShell = ({
   id,
   title = '',
   subtitle = '',
-  eyebrow = 'BUFFED ENGINEER MODE',
+  eyebrow = 'AUGMENTED ENGINEER MODE',
   headerAction,
   children,
 }: SectionShellProps) => {

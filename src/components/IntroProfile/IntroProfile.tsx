@@ -9,7 +9,7 @@ interface IntroProfileProps {
 }
 
 export const IntroProfile = ({ content }: IntroProfileProps) => (
-  <SectionShell id="intro-profile">
+  <SectionShell id="intro-profile" title={content.title} eyebrow="">
     <div className={styles.profile}>
       <motion.div
         className={styles.profile__media}
@@ -18,14 +18,6 @@ export const IntroProfile = ({ content }: IntroProfileProps) => (
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <figure className={styles.profile__photoCard}>
-          <img
-            className={styles.profile__photo}
-            src={resolveAssetUrl(content.photoSrc)}
-            alt={content.photoAlt}
-            loading="lazy"
-          />
-        </figure>
         <div className={styles.profile__logoWrap}>
           <img
             className={styles.profile__logo}
@@ -34,25 +26,6 @@ export const IntroProfile = ({ content }: IntroProfileProps) => (
             loading="lazy"
           />
         </div>
-      </motion.div>
-
-      <motion.div
-        className={styles.profile__info}
-        initial={{ opacity: 0, y: 14 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-      >
-        <p className={styles.profile__name}>
-          {content.nameLead}
-          {content.nameLead ? (
-            <span className={styles.profile__nameAccent}>{content.name}</span>
-          ) : (
-            content.name
-          )}
-        </p>
-        <p className={styles.profile__intro}>{content.intro}</p>
-        <p className={styles.profile__experience}>{content.experience}</p>
       </motion.div>
     </div>
   </SectionShell>

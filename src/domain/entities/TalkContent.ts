@@ -116,6 +116,7 @@ export interface AIEngineeringFundamentalsContent {
 }
 
 export interface IntroProfileContent {
+  title: string;
   /** Optional lead-in before `name` (e.g. "Soy "); `name` is styled as the highlighted part */
   nameLead?: string;
   name: string;

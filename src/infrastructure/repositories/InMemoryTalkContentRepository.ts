@@ -18,7 +18,7 @@ const aiSnippetCode = `<!-- IA (funciona hoy, lloras mañana) -->
   </button>
 </div>`;
 
-const engineerSnippetCode = `<!-- Tú, pero Buffado (Semantica, Accesibilidad, mantenibilidad y escalabilidad de estilos CSS) -->
+const engineerSnippetCode = `<!-- Tú como Ingeniero Aumentado (Semantica, Accesibilidad, mantenibilidad y escalabilidad de estilos CSS) -->
 <style>
   .user-card {
     display: flex;
@@ -82,11 +82,12 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
   getContent(): TalkContent {
     return {
       hero: {
-        title: 'The Buffed Engineer',
+        title: 'The Augmented Engineer',
         subtitle:
-          'IA + cabeza = código que no explota cuando lo usa gente real',
+          'IA + cabeza = código con sentido e intención',
       },
       introProfile: {
+        title: 'Quiénes somos',
         nameLead: 'Soy ',
         name: 'María Barrios',
         intro:
@@ -101,20 +102,8 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
       clientProjects: {
         title: 'Proyectos y clientes',
         subtitle:
-          'Algunos de los equipos y organizaciones en los que he colaborado a lo largo de estos años.',
+          'Algunos de los proyectos en los que trabajamos.',
         clients: [
-          {
-            id: 'unicaja',
-            name: 'Unicaja',
-            logoSrc: '/clients/unicaja.svg',
-            logoAlt: 'Logo Unicaja',
-          },
-          {
-            id: 'genially',
-            name: 'Genially',
-            logoSrc: '/clients/genially.png',
-            logoAlt: 'Logo Genially',
-          },
           {
             id: 'mcp',
             name: 'Mancomunidad de la Comarca de Pamplona',
@@ -122,10 +111,34 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
             logoAlt: 'Mancomunidad de la Comarca de Pamplona (MCP)',
           },
           {
-            id: 'zara',
-            name: 'Zara',
-            logoSrc: '/clients/zara.svg',
-            logoAlt: 'Logo Zara',
+            id: 'canal-march',
+            name: 'Canal March',
+            logoSrc: '/clients/canal-march.svg',
+            logoAlt: 'Logo Canal March',
+          },
+          {
+            id: 'lagunaro',
+            name: 'Lagun Aro',
+            logoSrc: '/clients/lagunaro.gif',
+            logoAlt: 'Logo Seguros Lagun Aro',
+          },
+          {
+            id: 'thyssen',
+            name: 'Museo Nacional Thyssen-Bornemisza',
+            logoSrc: '/clients/thyssen.svg',
+            logoAlt: 'Logo Museo Thyssen',
+          },
+          {
+            id: 'openbank',
+            name: 'Openbank',
+            logoSrc: '/clients/openbank.svg',
+            logoAlt: 'Logo Openbank',
+          },
+          {
+            id: 'adamo',
+            name: 'Adamo Telecom',
+            logoSrc: '/clients/adamo.svg',
+            logoAlt: 'Logo Adamo',
           },
           {
             id: 'el-corte-ingles',
@@ -158,7 +171,7 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
           code: aiSnippetCode,
         },
         engineerSnippet: {
-          label: 'Tú, pero Buffado',
+          label: 'Tú como Ingeniero Aumentado',
           language: 'html',
           code: engineerSnippetCode,
         },
@@ -242,7 +255,7 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
         ],
       },
       dailyTasks: {
-        title: 'El Día a Día Buffado',
+        title: 'El día a día del Ingeniero Aumentado',
         subtitle:
           'Tareas donde la IA brilla y marca la diferencia si tienes criterio.',
         tasks: [
@@ -466,19 +479,19 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
         references: [
           {
             label: 'AGENTS.md — Guía de agentes del proyecto',
-            url: 'https://github.com/mariaBarrios/the-buffed-engineer/blob/main/AGENTS.md',
+            url: 'https://github.com/mariaBarrios/the-augmented-engineer/blob/main/AGENTS.md',
           },
           {
             label: 'Rule — project-guardrails.mdc',
-            url: 'https://github.com/mariaBarrios/the-buffed-engineer/blob/main/.cursor/rules/project-guardrails.mdc',
+            url: 'https://github.com/mariaBarrios/the-augmented-engineer/blob/main/.cursor/rules/project-guardrails.mdc',
           },
           {
             label: 'Rule — react-talk-content-style.mdc',
-            url: 'https://github.com/mariaBarrios/the-buffed-engineer/blob/main/.cursor/rules/react-talk-content-style.mdc',
+            url: 'https://github.com/mariaBarrios/the-augmented-engineer/blob/main/.cursor/rules/react-talk-content-style.mdc',
           },
           {
             label: 'Skill — preparar-demo-charla',
-            url: 'https://github.com/mariaBarrios/the-buffed-engineer/blob/main/.cursor/skills/preparar-demo-charla/SKILL.md',
+            url: 'https://github.com/mariaBarrios/the-augmented-engineer/blob/main/.cursor/skills/preparar-demo-charla/SKILL.md',
           },
         ],
       },
@@ -581,16 +594,16 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
         references: [
           {
             label: 'Issue #1 — Fase 2: Optimizar bundle con code splitting',
-            url: 'https://github.com/mariaBarrios/the-buffed-engineer/issues/1',
+            url: 'https://github.com/mariaBarrios/the-augmented-engineer/issues/1',
           },
           {
             label:
               'Issue #2 — Fase 2: Extraer TalkContent fuera del repositorio in-memory',
-            url: 'https://github.com/mariaBarrios/the-buffed-engineer/issues/2',
+            url: 'https://github.com/mariaBarrios/the-augmented-engineer/issues/2',
           },
           {
             label: 'Issue #3 — Fase 2: Roadmap técnico para la charla',
-            url: 'https://github.com/mariaBarrios/the-buffed-engineer/issues/3',
+            url: 'https://github.com/mariaBarrios/the-augmented-engineer/issues/3',
           },
         ],
       },
@@ -602,7 +615,7 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
         thanks: 'Gracias por vuestro tiempo y por llegar hasta aquí.',
         motivation:
           'La IA potencia nuestro impacto, pero el verdadero cambio llega cuando combinamos tecnología, criterio arquitectónico y ganas de compartir.',
-        contactPrompt: 'Si quieres saber más o te interesa Jakala, hablemos:',
+        contactPrompt: '',
         linkedinLabel: 'linkedin.com/in/mbg-galdeano',
         linkedinUrl: 'https://www.linkedin.com/in/mbg-galdeano/',
         email: 'maria.barrios@jakala.com',

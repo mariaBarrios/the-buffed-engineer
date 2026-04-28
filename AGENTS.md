@@ -1,4 +1,4 @@
-# AGENTS Guide - The Buffed Engineer
+# AGENTS Guide - The Augmented Engineer
 
 Este archivo define agentes recomendados para trabajar en este proyecto de forma segura y didactica.
 

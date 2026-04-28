@@ -122,6 +122,7 @@ export interface ParadigmShiftViewModel {
 }
 
 export interface IntroProfileViewModel {
+  title: string;
   nameLead?: string;
   name: string;
   intro: string;

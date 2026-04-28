@@ -9,7 +9,7 @@ import { AIRails } from './components/AIRails/AIRails';
 // import { ContextStrategy } from "./components/ContextStrategy/ContextStrategy";
 import { AIEngineeringFundamentals } from './components/AIEngineeringFundamentals/AIEngineeringFundamentals';
 import { ParadigmShift } from './components/ParadigmShift/ParadigmShift';
-import { XpTimeline } from './components/XpTimeline/XpTimeline';
+// import { XpTimeline } from './components/XpTimeline/XpTimeline';
 // import { FinalKnowledgePill } from "./components/FinalKnowledgePill/FinalKnowledgePill";
 import { FinalContact } from './components/FinalContact/FinalContact';
 import type { TalkContentViewModel } from './presentation/view-models/TalkContentViewModel';
@@ -30,15 +30,15 @@ export const App = ({ content }: AppProps) => (
       transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
     >
       <IntroProfile content={content.introProfile} />
-      <XpTimeline timeline={content.timeline} />
+      {/* <XpTimeline timeline={content.timeline} /> */}
       <ClientProjects content={content.clientProjects} />
       <CodeDuel duel={content.codeDuel} />
       <AIFails content={content.aiFails} />
       <DailyTasks content={content.dailyTasks} />
-      <AIRails content={content.aiRails} />
       {/* <ContextStrategy content={content.contextStrategy} /> */}
       <AIEngineeringFundamentals content={content.aiEngineeringFundamentals} />
       <ParadigmShift content={content.paradigmShift} />
+      <AIRails content={content.aiRails} />
       {/* <FinalKnowledgePill content={content.finalSlide} /> */}
       <FinalContact content={content.finalContact} />
     </motion.main>
