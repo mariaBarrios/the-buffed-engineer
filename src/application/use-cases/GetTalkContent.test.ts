@@ -6,6 +6,7 @@ import type { TalkContentRepository } from '../../domain/ports/TalkContentReposi
 const contentFixture: TalkContent = {
   hero: { title: 'The Augmented Engineer', subtitle: 'subtitle' },
   introProfile: {
+    title: 'Quiénes somos',
     nameLead: 'Soy ',
     name: 'María',
     intro: 'intro',
