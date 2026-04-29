@@ -123,6 +123,12 @@ export class InMemoryTalkContentRepository implements TalkContentRepository {
             logoAlt: 'Logo Seguros Lagun Aro',
           },
           {
+            id: 'helvetia',
+            name: 'Helvetia',
+            logoSrc: '/clients/helvetia.svg',
+            logoAlt: 'Logo Helvetia',
+          },
+          {
             id: 'thyssen',
             name: 'Museo Nacional Thyssen-Bornemisza',
             logoSrc: '/clients/thyssen.svg',

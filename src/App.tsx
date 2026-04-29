@@ -36,9 +36,9 @@ export const App = ({ content }: AppProps) => (
       <AIFails content={content.aiFails} />
       <DailyTasks content={content.dailyTasks} />
       {/* <ContextStrategy content={content.contextStrategy} /> */}
+      <AIRails content={content.aiRails} />
       <AIEngineeringFundamentals content={content.aiEngineeringFundamentals} />
       <ParadigmShift content={content.paradigmShift} />
-      <AIRails content={content.aiRails} />
       {/* <FinalKnowledgePill content={content.finalSlide} /> */}
       <FinalContact content={content.finalContact} />
     </motion.main>
